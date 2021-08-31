@@ -19,11 +19,11 @@
 
 ## Description
 
-    This project will enable the users to securely log in to the web application and chat with other users. For this project we used new technology called websocket.
+This project will enable the users to securely log in to the web application and chat with other users. For this project we used new technology called websocket.
 
 ## User Story
 
-    As a private practice owner I would like an independent communication application. So that I can continually communicate with my clients face to face during lockdown or in remote locations.
+As a private practice owner I would like an independent communication application. So that I can continually communicate with my clients face to face during lockdown or in remote locations.
 
 ## Acceptance Criteria
 
@@ -143,7 +143,7 @@ If you would like to contribute to this project reach out to Authors of the proj
 
 **Nem Ajvaz** [Git Hub Profile](https://github.com/Nem-Ajvaz) 
 
-<img src="assets/img/ronin.png" width="50">  
+<img src="assets/img/ronin.jpg" width="50">  
 
 **Ronin Hietanen** [Git Hub Profile](https://github.com/RoninHietanen)  
 
