@@ -125,8 +125,10 @@ Sign up to create an account and start chatting !!!
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Contributors
 
-Ronin: Frontend Developer - Designer
-Nem: Project Manager - Scrum Master
+Ronin: Frontend Developer - Designer  
+
+Nem: Project Manager - Scrum Master  
+
 Tanvir: Visionary and Elon Musk of the group
 
 If you would like to contribute to this project reach out to Authors of the project below . 
