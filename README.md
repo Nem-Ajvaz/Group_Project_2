@@ -15,7 +15,7 @@
 - [Test Instructions](#test-instructions)
 - [Contribution](#contribution)
 - [License](#license)
-- [Contact Information](#contact-information)
+- [Authors](#authors)
 
 ## Description
 
