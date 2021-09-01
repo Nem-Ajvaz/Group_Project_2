@@ -1,4 +1,4 @@
-# TOLKS
+![Logo](assets/img/Chirper.png)
 
 ## Freedom of Dialogs!!!
 
