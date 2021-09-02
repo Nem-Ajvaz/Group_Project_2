@@ -1,7 +1,6 @@
-        <nav class="navbar navbar-light">
-            <a href="https://github.com/Nem-Ajvaz/Group_Project_2">
-                <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
-            </a>
+        <nav class="navbar navbar-light">   
+            <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+
             {{#if loggedIn}}
             <div>
                 <button type="button" id="newchat" class="btn btn-outline-secondary">New Chat</button>
@@ -22,3 +21,7 @@
                 </div>
             </div>
         </div>
+
+        {{#if loggedIn}}
+            <script>"./js/logout.js"</script>
+        {{/if}}

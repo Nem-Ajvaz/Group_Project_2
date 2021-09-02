@@ -73,3 +73,13 @@
     display: block;
     clear: both;
 }
+
+.gmail-custom {
+    padding: 5px;
+    width: 50px;
+}
+
+.github-custom {
+    padding: 5px;
+    width: 40px;
+}
