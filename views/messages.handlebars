@@ -12,11 +12,11 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <header class="guest-bg mx-auto text-center">guest</header>
-                    {{#each user.message as |guest|}}
+                    {{#each user as |guest|}}
                         {{> guest-message}}
                     {{/each}}
 
-                    {{#each user.message as |owner|}}
+                    {{#each user as |owner|}}
                         {{> owner-message}}
                     {{/each}}
                 </div>
