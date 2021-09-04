@@ -1,42 +1,39 @@
-        <nav class="navbar navbar-light">
-            <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
-            
-            {{#if loggedIn}}
-            <div>
-                <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
-                <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
-            </div>
-            {{/if}}
-        </nav>
-        <div class="container custom-container-bg mb-5">
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <header class="guest-bg mx-auto text-center">{{{user.guest}}}</header>
-                    <div id="messages">
-                        {{#each user as |guest|}}
-                            {{> guest-message}}
-                        {{/each}}
+{{#if loggedIn}} 
+    <p>PLACEHOLDER: TODO user not logged in</p>
+{{/if}}
 
-                        {{#each user as |owner|}}
-                            {{> owner-message}}
-                        {{/each}}
-                    </div>
-                    
-                </div>
+{{#if loggedIn}}
+{{else}}
+    <nav class="navbar navbar-light">
+        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+        <div>
+            <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
+            <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
+        </div>
+    </nav>
+    <div class="container custom-container-bg mb-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <header class="guest-bg mx-auto text-center">{{{user.guest}}}</header>
+                {{#each user as |guest|}}
+                    {{> guest-message}}
+                {{/each}}
+
+                {{#each user as |owner|}}
+                    {{> owner-message}}
+                {{/each}}
             </div>
-            <div class="row justify-content-center fixed-bottom mb-5">
-                <div class="col-sm-8">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary" type="button" id="send">Send</button>
-                        </div>
+        </div>
+        <div class="row justify-content-center fixed-bottom mb-5">
+            <div class="col-sm-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="send">Send</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        
-        {{#if loggedIn}}
-            <script>"./js/logout.js"</script>
-        {{/if}}
+    </div>
+    <script>"./js/logout.js"</script>
+{{/if }} 
