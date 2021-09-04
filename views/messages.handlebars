@@ -26,14 +26,16 @@
         </div>
         <div class="row justify-content-center fixed-bottom mb-5">
             <div class="col-sm-8">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send">
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="send">Send</button>
+                <form class="chat-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="send">Send</button>
+                        </div>
                     </div>
-                </div>
+                </form>      
             </div>
         </div>
     </div>
-    <script>"./js/logout.js"</script>
+    <script src="/js/messages.js"></script>
 {{/if }} 
