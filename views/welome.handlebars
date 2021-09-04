@@ -1,0 +1,27 @@
+        <nav class="navbar navbar-light">   
+            <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+
+            {{#if loggedIn}}
+            <div>
+                <button type="button" id="newchat" class="btn btn-outline-secondary">New Chat</button>
+                <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
+            </div>
+            {{/if}}
+        </nav>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <h2>Welcome {{{user}}}</h2>
+
+                    {{#each user  as |Administrator|}}
+                        {{> chats}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+
+        {{#if loggedIn}}
+            <script>"./js/logout.js"</script>
+        {{/if}}
