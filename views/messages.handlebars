@@ -12,13 +12,16 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <header class="guest-bg mx-auto text-center">{{{user.guest}}}</header>
-                    {{#each user as |guest|}}
-                        {{> guest-message}}
-                    {{/each}}
+                    <div id="messages">
+                        {{#each user as |guest|}}
+                            {{> guest-message}}
+                        {{/each}}
 
-                    {{#each user as |owner|}}
-                        {{> owner-message}}
-                    {{/each}}
+                        {{#each user as |owner|}}
+                            {{> owner-message}}
+                        {{/each}}
+                    </div>
+                    
                 </div>
             </div>
             <div class="row justify-content-center fixed-bottom mb-5">
@@ -33,6 +36,7 @@
             </div>
         </div>
 
+        
         {{#if loggedIn}}
             <script>"./js/logout.js"</script>
         {{/if}}
