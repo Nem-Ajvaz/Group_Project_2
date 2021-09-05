@@ -1,33 +1,36 @@
 :root {
-    --bg1: rgb(237, 228, 238);
-    --bd1: rgb(215, 204, 216);
-    --bg2: rgb(206, 233, 218);
-    --bd2: rgb(102, 165, 129);
+  --bg1: rgb(237, 228, 238);
+  --bd1: rgb(215, 204, 216);
+  --bg2: rgb(206, 233, 218);
+  --bd2: rgb(102, 165, 129);
 }
 
 .custom-btn {
-    background-color: rgba(11, 105, 53, 0.61);
+  background-color: rgba(11, 105, 53, 0.61);
 }
 
 .custom-hp-bg {
+
     background-color: var(--bg1);
     position: static;
     overflow: hidden;
     height: 100%;
     width: 100%;
+
 }
 
 .custom-ft-bg {
-    background-color: var(--bd1);
-    height: 40px;
+  background-color: var(--bd1);
+  height: 40px;
 }
 
 .custom-img {
-    padding: 5px;
-    width:300px;
+  padding: 5px;
+  width: 300px;
 }
 
 .custom-container-bg {
+
     background-color: var(--bg2);
     padding: 5px;
     border: 3px;
@@ -60,17 +63,17 @@
 }
 
 .guest-message {
-    background-color: var(--bg2);
-    padding: 8px;
-    width: auto;
-    height: auto;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--bd2);
-    border-radius: 15px;
-    display: block;
-    float: left;
-    clear: both;
+  background-color: var(--bg2);
+  padding: 8px;
+  width: auto;
+  height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd2);
+  border-radius: 15px;
+  display: block;
+  float: left;
+  clear: both;
 }
 
 .guest-timestap {
@@ -93,6 +96,7 @@
     display: block;
     float: right;
     clear: both;
+
 }
 
 .owner-timestap {
@@ -104,25 +108,28 @@
 }
 
 .chats {
-    background-color: var(--bg2);
-    padding: 10px;
-    border: 2px;
-    border-style: solid;
-    border-color: rgba(11, 105, 53, 0.295);
-    border-radius: 15px;
+  background-color: var(--bg2);
+  padding: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(11, 105, 53, 0.295);
+  border-radius: 15px;
 }
 
 .gmail-custom {
-    padding: 5px;
-    width: 50px;
+  padding: 5px;
+  width: 50px;
+  border-radius: 3px;
 }
 
 .github-custom {
-    padding: 5px;
-    width: 40px;
+  padding: 5px;
+  width: 40px;
+  border-radius: 3px;
 }
 
 .custom-field {
+
     position: fixed;
     bottom: 0;
     padding: 2%;
@@ -187,3 +194,4 @@
         max-width: 90vw;
     }
 }
+
