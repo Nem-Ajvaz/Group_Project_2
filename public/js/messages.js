@@ -21,9 +21,9 @@ socket.on('connect', () => {
     if (messageValue === '') return;
 
     const $userMessage = $('<p>'); //for message
-    const $userSendDetails = $('<p>');
-    $userSendDetails.text('Nem sent a message at 9:12');
-    $userSendDetails.addClass('message-info'); //needs to be added to the css.
+    // const $userSendDetails = $('<p>');
+    // $userSendDetails.text('Nem sent a message at 9:12');
+    // $userSendDetails.addClass('message-info'); //needs to be added to the css.
     $userMessage.text(messageValue);
 
     // console.log($userMessage);
@@ -36,11 +36,11 @@ socket.on('connect', () => {
     // logs to console
     console.log(data);
 
-    const $userReceiveDetails = $('<p>');
+    // const $userReceiveDetails = $('<p>');
     const $messageReceived = $('<p>');
 
-    $userReceiveDetails.text('Message received at sent a message at 9:12');
-    $userSendDetails.addClass('message-info'); //needs to be added to the css.
+    // $userReceiveDetails.text('Message received at sent a message at 9:12');
+    // $userSendDetails.addClass('message-info'); //needs to be added to the css.
 
     $messageReceived.text(data);
     // console.log($userMessage);

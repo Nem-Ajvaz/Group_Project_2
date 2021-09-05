@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-let messageFormat = (username, text) => {
+let messageFormat = (user_id, username, text) => {
   return {
     user_id, // either user from registration or the socket session
     username, // from sign in
