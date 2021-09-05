@@ -1,5 +1,8 @@
-const {io} = require("../../server.js");
+function initMessagesSocket(socket, io) {
+  socket.on('newMessage', msg => {
+    console.log('message', msg);
+    io.emit('chatMessage', msg);
+  });
+}
 
-io.on("message", (data) => {
-    console.log('data', data)
-})
+module.exports = { initMessagesSocket };
