@@ -14,28 +14,44 @@ socket.on('connect', () => {
   socket.emit('addUser', user);
 
   $formElem.on('submit', e => {
+    //Message Sender
     e.preventDefault();
 
     const messageValue = $messageInput.val().trim();
 
-    socket.emit('newMessage', messageValue);
+    socket.emit('newMessage', {
+      message_content: messageValue,
+      chat_id: '1',
+      sender_id: '1'
+    });
 
     // if its an empty string, end here.
     if (messageValue === '') return;
 
     const $userMessage = $('<p>'); //for message
+<<<<<<< Updated upstream
     // const $userSendDetails = $('<p>');
     // $userSendDetails.text('Nem sent a message at 9:12');
     // $userSendDetails.addClass('message-info'); //needs to be added to the css.
+=======
+    const $userSendDetails = $('<p>');
+    $userSendDetails.text('Nem sent a message at 9:12');
+    $userMessage.addClass('owner-message');
+    $userSendDetails.addClass('owner-message'); //Class needs to be different between the message sent.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     $userMessage.text(messageValue);
 
     // console.log($userMessage);
-    $messageDetails.append($userSendDetails);
     $messageDetails.append($userMessage);
+    $messageDetails.append($userSendDetails);
   });
 
   //listenner for a message being sent
   socket.on('message', data => {
+    //Message Recipient
     // Pick up the message sent
     // logs to console
     console.log(data);
@@ -43,6 +59,8 @@ socket.on('connect', () => {
     // const $userReceiveDetails = $('<p>');
     const $messageReceived = $('<p>');
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     // $userReceiveDetails.text('Message received at sent a message at 9:12');
     // $userSendDetails.addClass('message-info'); //needs to be added to the css.
@@ -50,11 +68,21 @@ socket.on('connect', () => {
     $userReceiveDetails.text('Message received at 9:12');
     $userReceiveDetails.addClass('message-info'); //needs to be added to the css.
 >>>>>>> e86f44e8e11f1677565ec516ebc196574e9770ce
+=======
+    $userReceiveDetails.text('Received at 9:12');
+    $userReceiveDetails.addClass('guest-message');
+    $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
+>>>>>>> Stashed changes
+=======
+    $userReceiveDetails.text('Received at 9:12');
+    $userReceiveDetails.addClass('guest-message');
+    $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
+>>>>>>> Stashed changes
 
     $messageReceived.text(data);
     // console.log($userMessage);
-    $messageDetails.append($userReceiveDetails);
     $messageDetails.append($messageReceived);
+    $messageDetails.append($userReceiveDetails);
   });
 
   socket.on('userAdded', data => {
