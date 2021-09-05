@@ -6,36 +6,36 @@
 {{else}}
     <nav class="navbar navbar-light">
         <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
-        <div>
-            <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
-            <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
-        </div>
-    </nav>
-    <div class="container custom-container-bg mb-5">
-        <div class="row justify-content-center">
-            <div class="col-sm-8">
-                <header class="guest-bg mx-auto text-center">{{{user.guest}}}</header>
-                {{#each user as |guest|}}
-                    {{> guest-message}}
-                {{/each}}
-
-                {{#each user as |owner|}}
-                    {{> owner-message}}
-                {{/each}}
+            <div>
+                <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
+                <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
             </div>
-        </div>
-        <div class="row justify-content-center fixed-bottom mb-5">
-            <div class="col-sm-8">
-                <form class="chat-form">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" id="send">Send</button>
+        </nav>
+        <div class="container custom-container-bg mb-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-8">
+                    <header class="name-bg mx-auto text-center">{{{user.guest}}}</header>
+                    {{#each user as |guest|}}
+                        {{> guest-message}}
+                    {{/each}}
+    
+                    {{#each user as |owner|}}
+                        {{> owner-message}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-8 mb-5 custom-field">
+                    <form class="chat-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="submit" id="send">Send</button>
+                            </div>
                         </div>
-                    </div>
-                </form>      
+                    </form>      
+                </div>
             </div>
         </div>
-    </div>
-    <script src="/js/messages.js"></script>
+        <script src="/js/messages.js"></script>
 {{/if }} 
