@@ -59,6 +59,10 @@ socket.on('connect', () => {
     $messageDetails.append(newUser);
   });
 
+  socket.on('end', function() {
+    socket.disconnect(0);
+  });
+
   socket.on('userRemoved', data => {
     console.log('data', data);
   });
