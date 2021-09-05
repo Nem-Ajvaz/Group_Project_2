@@ -12,11 +12,11 @@ socket.on('connect', () => {
   socket.emit('addUser', user);
 
   $formElem.on('submit', e => {
-    //Message Sender
     e.preventDefault();
 
     const messageValue = $messageInput.val().trim();
 
+    // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
       chat_id: '1',
@@ -26,13 +26,14 @@ socket.on('connect', () => {
     // if its an empty string, end here.
     if (messageValue === '') return;
 
-    const $userMessage = $('<p>'); //for message
+    const $userMessage = $('<p>');
     const $userSendDetails = $('<p>');
+
     $userSendDetails.text('Nem sent a message at 9:12');
     $userMessage.addClass('owner-message');
     $userSendDetails.addClass('owner-message'); //Class needs to be different between the message sent.
-    $userMessage.text(messageValue);
 
+    $userMessage.text(messageValue);
     $messageDetails.append($userMessage);
     $messageDetails.append($userSendDetails);
   });
