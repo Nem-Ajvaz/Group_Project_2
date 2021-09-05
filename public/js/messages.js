@@ -48,14 +48,11 @@ socket.on('connect', () => {
     $messageDetails.append($messageReceived);
   });
 
-  socket.on('connection', () => {
-    console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+  socket.on('userAdded', data => {
+    console.log('userAdded', data);
   });
 
-  socket.on('disconnect', () => {
-    console.log(socket.id); // undefined
+  socket.on('userRemoved', data => {
+    console.log('userRemoved', data);
   });
-  // socket.broadcast.emit('message', 'A user has joined the chat');
 });
-
-// TODO: append a message when the user sends a new one
