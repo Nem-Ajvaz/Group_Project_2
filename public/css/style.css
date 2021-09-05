@@ -11,6 +11,10 @@
 
 .custom-hp-bg {
     background-color: var(--bg1);
+    position: static;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 .custom-ft-bg {
@@ -27,22 +31,32 @@
     background-color: var(--bg2);
     padding: 5px;
     border: 3px;
+    max-height: 77vh;
+    max-width: 90vw;
     border-style: solid;
     border-color: var(--bd2);
     border-radius: 15px;
-    min-height: 77vh;
-    min-width: 80vw;
+    overflow-y: auto;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .name-bg {
     background-color: var(--bg2);
     padding: 3px;
-    width: 55%;
+    width: 30%;
     height: 30PX;
     border: 2px;
     border-style: solid;
     border-color: var(--bd2);
     border-radius: 15px;
+    position: fixed;
+    /* display: block; */
+    overflow: hidden;
+    justify-self: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .guest-message {
@@ -59,9 +73,17 @@
     clear: both;
 }
 
+.guest-timestap {
+    padding: 5px;
+    display: block;
+    float: left;
+    clear: both;
+    font-style: italic;
+}
+
 .owner-message {
     background-color: var(--bg1);
-    padding: 8px;
+    padding: 5px;
     width: auto;
     height: auto;
     border: 2px;
@@ -71,6 +93,14 @@
     display: block;
     float: right;
     clear: both;
+}
+
+.owner-timestap {
+    padding: 5px;
+    display: block;
+    float: right;
+    clear: both;
+    font-style: italic;
 }
 
 .chats {
@@ -93,6 +123,67 @@
 }
 
 .custom-field {
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    padding: 2%;
+}
+
+.col-custom {
+    margin-bottom: 5%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg2);
+    border-radius: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(210, 144, 226);
+    border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(156, 5, 136);
+    border-radius: 15px;
+}
+
+@media (min-height: 500px) {
+    .custom-container-bg {
+        max-height: 60vh;
+        max-width: 90vw;
+    }
+}
+
+@media (min-height: 600px) {
+    .custom-container-bg {
+        max-height: 65vh;
+        max-width: 90vw;
+    }
+}
+
+@media (min-height: 700px) {
+    .custom-container-bg {
+        max-height: 70vh;
+        max-width: 90vw;
+    }
+}
+
+@media (min-height: 800px) {
+    .custom-container-bg {
+        max-height: 75vh;
+        max-width: 90vw;
+    }
+}
+
+@media (min-height: 900px) {
+    .custom-container-bg {
+        max-height: 80vh;
+        max-width: 90vw;
+    }
 }
