@@ -1,81 +1,98 @@
-    .custom-btn {
-        background-color: rgba(11, 105, 53, 0.61);
-    }
+:root {
+    --bg1: rgb(237, 228, 238);
+    --bd1: rgb(215, 204, 216);
+    --bg2: rgb(206, 233, 218);
+    --bd2: rgb(102, 165, 129);
+}
 
-    .custom-hp-bg {
-        background-color: rgba(89, 11, 105, 0.055);
-    }
+.custom-btn {
+    background-color: rgba(11, 105, 53, 0.61);
+}
 
-    .custom-img {
-        padding: 5px;
-        width:300px;
-    }
+.custom-hp-bg {
+    background-color: var(--bg1);
+}
 
-    .custom-container-bg {
-        background-color: rgba(11, 105, 53, 0.055);
-        padding: 5px;
-        border: 3px;
-        border-style: solid;
-        border-color: rgba(11, 105, 53, 0.295);
-        border-radius: 15px;
-        min-height: 77vh;
-        min-width: 80vw;
-    }
+.custom-ft-bg {
+    background-color: var(--bd1);
+    height: 40px;
+}
 
-    .guest-bg {
-        background-color: rgba(11, 105, 53, 0.055);
-        padding: 3px;
-        width: 55%;
-        height: 30PX;
-        border: 2px;
-        border-style: solid;
-        border-color: rgba(11, 105, 53, 0.295);
-        border-radius: 15px;
-    }
+.custom-img {
+    padding: 5px;
+    width:300px;
+}
 
-    .guest-message {
-        background-color: rgba(11, 105, 53, 0.055);
-        padding: 8px;
-        width: auto;
-        height: auto;
-        border: 2px;
-        border-style: solid;
-        border-color: rgba(11, 105, 53, 0.295);
-        border-radius: 15px;
-        display: block;
-        float: left;
-        clear: both;
-    }
+.custom-container-bg {
+    background-color: var(--bg2);
+    padding: 5px;
+    border: 3px;
+    border-style: solid;
+    border-color: var(--bd2);
+    border-radius: 15px;
+    min-height: 77vh;
+    min-width: 80vw;
+}
 
-    .owner-message {
-        background-color: rgba(89, 11, 105, 0.055);
-        padding: 8px;
-        width: auto;
-        height: auto;
-        border: 2px;
-        border-style: solid;
-        border-color: rgba(89, 11, 105, 0.295);
-        border-radius: 15px;
-        display: block;
-        float: right;
-        clear: both;
-    }
+.name-bg {
+    background-color: var(--bg2);
+    padding: 3px;
+    width: 55%;
+    height: 30PX;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--bd2);
+    border-radius: 15px;
+}
 
-    .chats {
-        background-color: rgba(89, 11, 105, 0.055);
-        padding: 10px;
-        border: 2px;
-        border-style: solid;
-        border-color: rgba(11, 105, 53, 0.295);
-        border-radius: 15px;
-    }
+.guest-message {
+    background-color: var(--bg2);
+    padding: 8px;
+    width: auto;
+    height: auto;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--bd2);
+    border-radius: 15px;
+    display: block;
+    float: left;
+    clear: both;
+}
 
-    .gmail-custom {
-        padding: 5px;
-        width: 50px;
-    }
+.owner-message {
+    background-color: var(--bg1);
+    padding: 8px;
+    width: auto;
+    height: auto;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--bd1);
+    border-radius: 15px;
+    display: block;
+    float: right;
+    clear: both;
+}
 
-    .github-custom {
-        padding: 5px;
-        width: 40px;
-    }
+.chats {
+    background-color: var(--bg2);
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(11, 105, 53, 0.295);
+    border-radius: 15px;
+}
+
+.gmail-custom {
+    padding: 5px;
+    width: 50px;
+}
+
+.github-custom {
+    padding: 5px;
+    width: 40px;
+}
+
+.custom-field {
+    position: absolute;
+    bottom: 0;
+}
