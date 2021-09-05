@@ -1,6 +1,16 @@
-        <nav class="navbar navbar-light">   
-            <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+{{#if loggedIn}} 
+    <div class="card w-75 mx-auto custom-hp-bg text-center" style="width: 18rem;">
+	    <div class="card-body">
+    		<h3 class="card-subtitle mb-2">~ You are not Signed in ~</h3>
+		    <br><br>
+		    <br><br>
+		    <button type="submit" id="signup-initial" class="btn custom-btn font-weight-bold px-md-5">Sign Up</button>
+            <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
+	    </div>
+    </div>
+{{/if}}
 
+<<<<<<< HEAD:views/welcome.handlebars
             {{!-- {{#if loggedIn}} // Will be implemented once authentication is finished --}}
             <div>
                 <button type="button" id="newchat" class="btn btn-outline-secondary">New Chat</button>
@@ -8,20 +18,42 @@
             </div>
             {{!-- {{/if}} // Will be implemented once authentication is finished --}}
         </nav>
+=======
+{{#if loggedIn}}
+{{else}}                
+    <nav class="navbar navbar-light">   
+        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
 
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <h2>Welcome {{{user}}}</h2>
+            
+        <div>
+            <button type="submit" id="newchat" class="btn btn-outline-secondary">New Chat</button>
+            <button type="submit" id="logout" class="btn btn-outline-dark">Log Out</button>
+        </div>
+            
+    </nav>
+>>>>>>> e86f44e8e11f1677565ec516ebc196574e9770ce:views/welome.handlebars
 
-                    {{#each user  as |Administrator|}}
-                        {{> chats}}
-                    {{/each}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <h2>Welcome {{{user}}}</h2>
 
-                </div>
+                {{#each user  as |Administrator|}}
+                    {{> chats}}
+                {{/each}}
+
             </div>
         </div>
+    </div>
 
+        
+    <script>"./js/logout.js"</script>
+        
+
+<<<<<<< HEAD:views/welcome.handlebars
         {{!-- {{#if loggedIn}} //Will be implemented once authentication is finished --}}
             <script>"./js/logout.js"</script>
         {{!-- {{/if}} //Will be implemented once authentication is finished --}}
+=======
+{{/if }} 
+>>>>>>> e86f44e8e11f1677565ec516ebc196574e9770ce:views/welome.handlebars

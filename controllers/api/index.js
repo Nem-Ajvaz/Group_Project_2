@@ -2,11 +2,16 @@
 const router = require('express').Router();
 
 // import locals
-// const messageRouter = require('./messages');
+const messageRouter = require('./messages-routes');
+// const chatRouter = require('./chat-routes');
+// const userRouter = require('./user-routes');
+// const authRouter = require('./auth-routes');
 
-// router.use('/', messageRouter);
-
-router.use('/');
+//Establish routing path
+router.use('/', messageRouter);
+// router.use('/', chatRouter);
+// router.use('/', userRouter);
+// router.use('/', authRouter);
 
 module.exports = router;
 /**
