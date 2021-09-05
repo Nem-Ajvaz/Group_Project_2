@@ -1,14 +1,24 @@
 {{#if loggedIn}} 
-    <p>PLACEHOLDER: TODO user not logged in</p>
+    <div class="card w-75 mx-auto custom-hp-bg text-center" style="width: 18rem;">
+	    <div class="card-body">
+    		<h3 class="card-subtitle mb-2">~ You are not Signed in ~</h3>
+		    <br><br>
+		    <br><br>
+		    <button type="submit" id="signup-initial" class="btn custom-btn font-weight-bold px-md-5">Sign Up</button>
+            <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
+	    </div>
+    </div>
 {{/if}}
 
 {{#if loggedIn}}
 {{else}}
     <nav class="navbar navbar-light">
         <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+
             <div>
                 <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
                 <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
+
             </div>
         </nav>
         <div class="container custom-container-bg mb-5">
@@ -37,5 +47,7 @@
                 </div>
             </div>
         </div>
+
         <script src="/js/messages.js"></script>
 {{/if }} 
+
