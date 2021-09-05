@@ -1,3 +1,5 @@
+
+
 function initMessagesSocket(socket, io) {
   socket.on('newMessage', msg => {
     console.log('message', msg);
