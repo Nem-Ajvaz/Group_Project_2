@@ -1,18 +1,15 @@
 // Required functionality
 const path = require('path');
 const express = require('express');
+const morgan = require('morgan');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const sequelize = require('./config/connection');
-const morgan = require('morgan');
-
-// Socket.io functionality
 const http = require('http');
 const socket = require('socket.io');
-
-// Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const routes = require('./controllers');
+const sequelize = require('./config/connection');
 
 const app = express();
 const SERVER_PORT = process.env.PORT || 3001;
@@ -46,9 +43,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
-  app.listen(SERVER_PORT, () => console.log('Now listening Sequelize Live!!!'));
-  server.listen(SOCKET_PORT, () =>
-    console.log(`Server running on port ${SOCKET_PORT}. Socket.io is live!!!`)
-  );
-});
+(async () => {
+  await sequelize.sync({ force: false })
+  app.listen(SERVER_PORT, () => {
+    console.log('Now listening Sequelize Live!!!')
+
+    server.listen(SOCKET_PORT, () =>
+      console.log(`Server running on port ${SOCKET_PORT}. Socket.io is live!!!`)
+    );
+  });
+})()
+
+module.exports = {io};
