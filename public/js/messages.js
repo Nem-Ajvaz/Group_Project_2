@@ -7,7 +7,7 @@ const $messageInput = $('#message-input');
 const $messageDetails = $('#messageDetails');
 
 socket.on('connect', () => {
-  console.log(socket.id);
+  console.log(`A new user has joined the chat with socket id ${socket.id}`);
   // x8WIv7-mJelg7on_ALbx
 
   $formElem.on('submit', e => {
@@ -39,13 +39,23 @@ socket.on('connect', () => {
     const $userReceiveDetails = $('<p>');
     const $messageReceived = $('<p>');
 
-    $userReceiveDetails.text('Message received at sent a message at 9:12');
-    $userSendDetails.addClass('message-info'); //needs to be added to the css.
+    $userReceiveDetails.text('Message received at 9:12');
+    $userReceiveDetails.addClass('message-info'); //needs to be added to the css.
 
     $messageReceived.text(data);
     // console.log($userMessage);
+    $messageDetails.append($userReceiveDetails);
     $messageDetails.append($messageReceived);
   });
+
+  socket.on('connection', () => {
+    console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+  });
+
+  socket.on('disconnect', () => {
+    console.log(socket.id); // undefined
+  });
+  // socket.broadcast.emit('message', 'A user has joined the chat');
 });
 
 // TODO: append a message when the user sends a new one
