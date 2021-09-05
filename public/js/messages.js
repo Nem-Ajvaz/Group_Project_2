@@ -8,7 +8,10 @@ const $messageDetails = $('#messageDetails');
 
 socket.on('connect', () => {
   console.log(`A new user has joined the chat with socket id ${socket.id}`);
+  let user = socket.id;
+
   // x8WIv7-mJelg7on_ALbx
+  socket.emit('addUser', user);
 
   $formElem.on('submit', e => {
     e.preventDefault();
@@ -31,6 +34,7 @@ socket.on('connect', () => {
     $messageDetails.append($userMessage);
   });
 
+  //listenner for a message being sent
   socket.on('message', data => {
     // Pick up the message sent
     // logs to console
@@ -49,10 +53,13 @@ socket.on('connect', () => {
   });
 
   socket.on('userAdded', data => {
-    console.log('userAdded', data);
+    console.log('data', data);
+    const newUser = $('<p>');
+    newUser.text(`New user: ${data} has joined the chat`);
+    $messageDetails.append(newUser);
   });
 
   socket.on('userRemoved', data => {
-    console.log('userRemoved', data);
+    console.log('data', data);
   });
 });
