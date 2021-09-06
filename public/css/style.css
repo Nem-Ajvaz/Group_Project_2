@@ -131,6 +131,8 @@
 
 .custom-btn {
     background-color: rgba(11, 105, 53, 0.61);
+    margin: 2%;
+    padding: 5px;
 }
 
 /* Styling the Input */
