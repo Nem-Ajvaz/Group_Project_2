@@ -5,11 +5,12 @@ const router = require('express').Router();
 const messageRouter = require('./messages-routes');
 const authRouter = require('./auth');
 // const chatRouter = require('./chat-routes');
-// const userRouter = require('./user-routes');
+const createUserRouter = require('./create_user-routes');
 
 //Establish routing path
 router.use('/', messageRouter);
 router.use('/auth', authRouter);
+router.use('/createUser', createUserRouter);
 // router.use('/', chatRouter);
 // router.use('/', userRouter);
 
