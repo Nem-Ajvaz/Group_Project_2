@@ -51,6 +51,11 @@
     right: 0;
 }
 
+/* Header Styling */
+.welcome {
+    margin-bottom: 5%;
+}
+
 /* Image Styling */
 .custom-img {
     padding: 5px;
@@ -127,6 +132,7 @@
     border-style: solid;
     border-color: rgba(11, 105, 53, 0.295);
     border-radius: 15px;
+    line-height: 10px;
 }
 
 .custom-btn {
