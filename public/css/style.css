@@ -59,7 +59,7 @@
 /* Image Styling */
 .custom-img {
     padding: 5px;
-    width:300px;
+    width: 300px;
 }
 
 .gmail-custom {
@@ -113,17 +113,30 @@
     font-size: smaller;
 }
 
-.gmail-custom {
-  padding: 5px;
-  width: 50px;
-  border-radius: 25%;
+.owner-timestap {
+    padding: 1px;
+    display: block;
+    float: right;
+    clear: both;
+    font-style: italic;
+    color: rgb(112, 112, 112);
+    line-height: 2px;
+    font-size: smaller;
 }
 
-.github-custom {
-  padding: 5px;
-  width: 40px;
-  border-radius: 25%;
+/* Button Styling */
+.chats {
+    background-color: var(--bg2);
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(11, 105, 53, 0.295);
+    border-radius: 15px;
+    line-height: 10px;
+}
 
+.custom-btn {
+    background-color: rgba(11, 105, 53, 0.61);
 }
 
 /* Styling the Input */
