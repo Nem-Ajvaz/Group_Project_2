@@ -1,49 +1,41 @@
-//signin
-const loginFormHandler = async (event) => {
+const $signinForm = $('#signinFormele');
+
+const loginFormHandler = async event => {
   event.preventDefault();
 
-  const name = document.querySelector('#InputUsername-signin').value.trim();
-  const password = document.querySelector('#InputPassword-signin').value.trim();
-  
-  if (email && password) {
-    const response = await fetch('/api/users/login', {
+  const username = $('#InputUsername-signin')
+    .val()
+    .trim();
+  const password = $('#InputPassword-signin')
+    .val()
+    .trim();
+
+  if (username && password) {
+    const response = await fetch('/api/auth/signin', {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
-      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
     });
-  
+
     if (response.ok) {
       document.location.replace('/welcome');
     } else {
-      alert(response.statusText);
+      alert('Failed to log in');
     }
   }
 };
 
-//signup
-const signupFormHandler = async (event) => {
-  event.preventDefault();
-  
-  const name = document.querySelector('#InputUsername-signup').value.trim();
-  const email = document.querySelector('#InputEmail-signup').value.trim();
-  const password = document.querySelector('#InputPassword-signup').value.trim();
-  
-  if (name && email && password) {
-    const response = await fetch('/api/users', {
-      method: 'POST',
-      body: JSON.stringify({ name, email, password }),
-      headers: { 'Content-Type': 'application/json' },
-    });
-  
-    if (response.ok) {
-      document.location.replace('/welcome');
-    } else {
-      alert(response.statusText);
-    }
-  }
-};
-  
-document.querySelector('#siginin').addEventListener('submit', loginFormHandler);
-  
-document.querySelector('#signup').addEventListener('submit', signupFormHandler);
-  
+$signinForm.on('submit', loginFormHandler);
+
+// $('#signupFormInput').on('submit', loginFormHandler);
+
+// $signInEle.on('submit', loginFormHandler);
+
+// $signinForm.on('submit', e => {
+//   e.preventDefault();
+
+//   const $username = $('#InputUsername-signin').val();
+//   const $password = $('#InputPassword-signin').val();
+
+//   console.log($username);
+//   console.log($password);
+// });

@@ -2,8 +2,11 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const http = require('http');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -16,6 +19,18 @@ const server = http.createServer(app);
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
