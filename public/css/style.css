@@ -113,32 +113,17 @@
     font-size: smaller;
 }
 
-.owner-timestap {
-    padding: 1px;
-    display: block;
-    float: right;
-    clear: both;
-    font-style: italic;
-    color: rgb(112, 112, 112);
-    line-height: 2px;
-    font-size: smaller;
+.gmail-custom {
+  padding: 5px;
+  width: 50px;
+  border-radius: 25%;
 }
 
-/* Button Styling */
-.chats {
-    background-color: var(--bg2);
-    padding: 10px;
-    border: 2px;
-    border-style: solid;
-    border-color: rgba(11, 105, 53, 0.295);
-    border-radius: 15px;
-    line-height: 10px;
-}
+.github-custom {
+  padding: 5px;
+  width: 40px;
+  border-radius: 25%;
 
-.custom-btn {
-    background-color: rgba(11, 105, 53, 0.61);
-    margin: 2%;
-    padding: 5px;
 }
 
 /* Styling the Input */
