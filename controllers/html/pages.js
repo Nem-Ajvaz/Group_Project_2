@@ -1,8 +1,7 @@
 const router = require('express').Router();
 
-
-router.get ('/', (req, res) => {
-  res.render ('homepage');
+router.get('/', (req, res) => {
+  res.render('homepage');
 });
 
 router.get('/signup', (req, res) => {
@@ -20,8 +19,7 @@ router.get('/signin', (req, res) => {
 });
 
 router.get('/welcome', (req, res) => {
-
-   // if (req.session.loggedIn) {
+  // if (req.session.loggedIn) {
   // res.redirect('/signin');
   //   return;
   // }

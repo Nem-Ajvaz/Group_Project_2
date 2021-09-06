@@ -85,13 +85,13 @@
 .gmail-custom {
   padding: 5px;
   width: 50px;
-  border-radius: 3px;
+  border-radius: 25%;
 }
 
 .github-custom {
   padding: 5px;
   width: 40px;
-  border-radius: 3px;
+  border-radius: 25%;
 }
 
 .custom-field {
