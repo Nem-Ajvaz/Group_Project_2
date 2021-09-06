@@ -1,36 +1,26 @@
+/* Roots */
 :root {
-  --bg1: rgb(237, 228, 238);
-  --bd1: rgb(215, 204, 216);
-  --bg2: rgb(206, 233, 218);
-  --bd2: rgb(102, 165, 129);
+    --bg1: rgb(237, 228, 238);
+    --bd1: rgb(215, 204, 216);
+    --bg2: rgb(206, 233, 218);
+    --bd2: rgb(102, 165, 129);
 }
 
-.custom-btn {
-  background-color: rgba(11, 105, 53, 0.61);
-}
-
+/* Background Styling */
 .custom-hp-bg {
-
     background-color: var(--bg1);
     position: static;
     overflow: hidden;
     height: 100%;
     width: 100%;
-
 }
 
 .custom-ft-bg {
-  background-color: var(--bd1);
-  height: 40px;
-}
-
-.custom-img {
-  padding: 5px;
-  width: 300px;
+    background-color: var(--bd1);
+    height: 40px;
 }
 
 .custom-container-bg {
-
     background-color: var(--bg2);
     padding: 5px;
     border: 3px;
@@ -54,7 +44,6 @@
     border-color: var(--bd2);
     border-radius: 15px;
     position: fixed;
-    /* display: block; */
     overflow: hidden;
     justify-self: center;
     margin: 0 auto;
@@ -62,26 +51,35 @@
     right: 0;
 }
 
-.guest-message {
-  background-color: var(--bg2);
-  padding: 8px;
-  width: auto;
-  height: auto;
-  border: 2px;
-  border-style: solid;
-  border-color: var(--bd2);
-  border-radius: 15px;
-  display: block;
-  float: left;
-  clear: both;
+/* Image Styling */
+.custom-img {
+    padding: 5px;
+    width:300px;
 }
 
-.guest-timestap {
+.gmail-custom {
     padding: 5px;
+    width: 50px;
+}
+
+.github-custom {
+    padding: 5px;
+    width: 40px;
+}
+
+/* Message Styling */
+.guest-message {
+    background-color: var(--bg2);
+    padding: 8px;
+    width: auto;
+    height: auto;
+    border: 2px;
+    border-style: solid;
+    border-color: var(--bd2);
+    border-radius: 15px;
     display: block;
     float: left;
     clear: both;
-    font-style: italic;
 }
 
 .owner-message {
@@ -96,7 +94,15 @@
     display: block;
     float: right;
     clear: both;
+}
 
+/* Timestamp Styling */
+.guest-timestap {
+    padding: 5px;
+    display: block;
+    float: left;
+    clear: both;
+    font-style: italic;
 }
 
 .owner-timestap {
@@ -107,38 +113,43 @@
     font-style: italic;
 }
 
+/* Button Styling */
 .chats {
-  background-color: var(--bg2);
-  padding: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: rgba(11, 105, 53, 0.295);
-  border-radius: 15px;
+    background-color: var(--bg2);
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgba(11, 105, 53, 0.295);
+    border-radius: 15px;
 }
 
-.gmail-custom {
-  padding: 5px;
-  width: 50px;
-  border-radius: 3px;
+.custom-btn {
+    background-color: rgba(11, 105, 53, 0.61);
 }
 
-.github-custom {
-  padding: 5px;
-  width: 40px;
-  border-radius: 3px;
-}
-
+/* Styling the Input */
 .custom-field {
-
     position: fixed;
     bottom: 0;
-    padding: 2%;
+    padding: 5px;
 }
 
+/* Styling the  */
 .col-custom {
     margin-bottom: 5%;
+    margin-top: 5%;
 }
 
+/* Styling the -user- joined message */
+.user-joined {
+    padding: 5px;
+    display: block;
+    text-align: center;
+    clear: both;
+    font-style: italic;
+}
+
+/* Styling the scroll bar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -160,6 +171,7 @@
     border-radius: 15px;
 }
 
+/* Styling height responsiveness */
 @media (min-height: 500px) {
     .custom-container-bg {
         max-height: 60vh;
@@ -190,8 +202,7 @@
 
 @media (min-height: 900px) {
     .custom-container-bg {
-        max-height: 80vh;
+        max-height: 77vh;
         max-width: 90vw;
     }
 }
-
