@@ -98,19 +98,25 @@
 
 /* Timestamp Styling */
 .guest-timestap {
-    padding: 5px;
+    padding: 1px;
     display: block;
     float: left;
     clear: both;
     font-style: italic;
+    color: rgb(112, 112, 112);
+    line-height: 2px;
+    font-size: smaller;
 }
 
 .owner-timestap {
-    padding: 5px;
+    padding: 1px;
     display: block;
     float: right;
     clear: both;
     font-style: italic;
+    color: rgb(112, 112, 112);
+    line-height: 2px;
+    font-size: smaller;
 }
 
 /* Button Styling */
@@ -147,6 +153,8 @@
     text-align: center;
     clear: both;
     font-style: italic;
+    color: rgb(112, 112, 112);
+    line-height: 2px;
 }
 
 /* Styling the scroll bar */
