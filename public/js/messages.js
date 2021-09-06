@@ -40,13 +40,15 @@ socket.on('connect', () => {
 
   //listenner for a message being sent
   socket.on('message', data => {
+    console.log(data.message_content);
     const $messageReceived = $('<p>');
+    const $userReceiveDetails = $('<p>');
 
     $userReceiveDetails.text('Received at 9:12');
     $userReceiveDetails.addClass('guest-message');
     $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
 
-    $messageReceived.text(data);
+    $messageReceived.text(data.message_content);
     $messageDetails.append($messageReceived);
     $messageDetails.append($userReceiveDetails);
   });

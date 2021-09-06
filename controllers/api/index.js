@@ -3,15 +3,15 @@ const router = require('express').Router();
 
 // import locals
 const messageRouter = require('./messages-routes');
+const authRouter = require('./auth');
 // const chatRouter = require('./chat-routes');
 // const userRouter = require('./user-routes');
-// const authRouter = require('./auth-routes');
 
 //Establish routing path
 router.use('/', messageRouter);
+router.use('/auth', authRouter);
 // router.use('/', chatRouter);
 // router.use('/', userRouter);
-// router.use('/', authRouter);
 
 module.exports = router;
 /**
