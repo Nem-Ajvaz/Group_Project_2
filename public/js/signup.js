@@ -1,30 +1,35 @@
-// const loginFormHandler = async event => {
-//   event.preventDefault();
+const loginFormHandler = async event => {
+  event.preventDefault();
 
-//   const display_name = $('#InputUsername-signup')
-//     .val()
-//     .trim();
-//   const pass_word = $('#InputPassword-signup')
-//     .val()
-//     .trim();
-//   const email = $('#InputEmail-signup')
-//     .val()
-//     .trim();
+  const username = $('#InputUsername-signup')
+    .val()
+    .trim();
+  const password = $('#InputPassword-signup')
+    .val()
+    .trim();
+  const email = $('#InputEmail-signup')
+    .val()
+    .trim();
 
-//   if (display_name && pass_word) {
-//     const response = await fetch('/api/login', {
-//       method: 'POST',
-//       body: JSON.stringify({ display_name, pass_word, email })
-//     });
+  // console.log(username);
+  // console.log(password);
+  // console.log(email);
 
-//     if (response.ok) {
-//       document.location.replace('/welcome');
-//     } else {
-//       alert('Failed to log in');
-//     }
-//   }
-// };
+  if (username && password && email) {
+    const response = await fetch('/api/createUser/signup', {
+      method: 'POST',
+      body: JSON.stringify({ username, password, email }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
 
-// $('#signupFormInput').on('submit', loginFormHandler);
+    if (response.ok) {
+      document.location.replace('/welcome');
+    } else {
+      alert('Failed to sign up');
+    }
+  }
+};
 
-//FRED TEST123
+$('#signupFormInput').on('submit', loginFormHandler);

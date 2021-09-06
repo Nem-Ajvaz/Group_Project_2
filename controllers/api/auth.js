@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-//FRED TEST123
 router.post('/signin', async (req, res) => {
   try {
+    console.log(req.body);
     const userData = await User.findOne({
       where: { display_name: req.body.username }
     });
