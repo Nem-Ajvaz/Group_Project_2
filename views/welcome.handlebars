@@ -13,11 +13,8 @@
 {{#if loggedIn}}
 {{else}}                
     <nav class="navbar navbar-light">   
-        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
-
-            
+        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img"> 
         <div>
-            <button type="submit" id="newchat" class="btn btn-outline-secondary">New Chat</button>
             <button type="submit" id="logout" class="btn btn-outline-dark">Log Out</button>
         </div>
             
@@ -26,7 +23,21 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-8">
-                <h2 class="welcome">Welcome {{{user}}}</h2>
+                <div class="welcome">
+                    <h2 id="welcome">Welcome {{{user}}}</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 mb-5 custom-field2">
+                            <form class="chat-form">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="submit" id="createRoom">Create Room</button>
+                                    </div>
+                                </div>
+                            </form>      
+                        </div>
+                    </div>
+                </div>
 
                 {{#each user  as |Administrator|}}
                     {{> chats}}

@@ -65,6 +65,8 @@
 /* Header Styling */
 .welcome {
     margin-bottom: 5%;
+    margin-top: -10%;
+    margin-left: 5%;
 }
 
 /* Image Styling */
@@ -168,10 +170,24 @@
     margin: 2%;
 }
 
+.custom-btn-signup {
+    background-color: rgba(11, 105, 53, 0.61);
+    width: 200px;
+    margin: 2%;
+    margin-left: 8%;
+    float: left;
+}
+
 /* Styling the Input */
 .custom-field {
     position: fixed;
     bottom: 0;
+    padding: 5px;
+}
+
+.custom-field2 {
+    min-width: 50vw;
+    max-width: 110vh;
     padding: 5px;
 }
 
