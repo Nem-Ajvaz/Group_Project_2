@@ -274,15 +274,4 @@
         min-height: 77vh;
         min-width: 90vw;
     }
-}
-
-/* Styling width responsiveness */
-
-@media (max-width: 1190px) {
-    .custom-btn-signup {
-        background-color: rgba(11, 105, 53, 0.61);
-        width: 200px;
-        margin: 2%;
-        float: none;
-    }
-}
+} 
