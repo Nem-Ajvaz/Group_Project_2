@@ -1,14 +1,23 @@
 /* Roots */
 :root {
-    --bg1: rgb(237, 228, 238);
+    --bg1: rgb(248, 244, 248);
     --bd1: rgb(215, 204, 216);
     --bg2: rgb(206, 233, 218);
     --bd2: rgb(102, 165, 129);
+    --bg3: rgb(237, 228, 238);
 }
 
 /* Background Styling */
 .custom-hp-bg {
     background-color: var(--bg1);
+    position: static;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.custom-card-bg {
+    background-color: var(--bg3);
     position: static;
     overflow: hidden;
     height: 100%;
@@ -68,10 +77,24 @@
     height: 40px;
 }
 
+.gmail-custom:hover {
+    padding: 5px;
+    width: 45px;
+    height: 35px;
+    border-radius: 5px;
+}
+
 .github-custom {
     padding: 5px;
     width: 40px;
     height: 40px;
+}
+
+.github-custom:hover {
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
 }
 
 /* Message Styling */
@@ -139,6 +162,8 @@
 
 .custom-btn {
     background-color: rgba(11, 105, 53, 0.61);
+    width: 200px;
+    margin: 2%;
 }
 
 /* Styling the Input */
