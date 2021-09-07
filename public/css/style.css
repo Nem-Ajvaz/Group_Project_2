@@ -65,11 +65,13 @@
 .gmail-custom {
     padding: 5px;
     width: 50px;
+    height: 40px;
 }
 
 .github-custom {
     padding: 5px;
     width: 40px;
+    height: 40px;
 }
 
 /* Message Styling */

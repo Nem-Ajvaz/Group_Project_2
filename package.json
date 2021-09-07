@@ -32,5 +32,13 @@
     "eslint-plugin-prettier": "^3.1.2",
     "nodemon": "^2.0.12",
     "prettier": "^1.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nem-Ajvaz/Group_Project_2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nem-Ajvaz/Group_Project_2/issues"
+  },
+  "homepage": "https://github.com/Nem-Ajvaz/Group_Project_2#readme"
 }
