@@ -35,6 +35,8 @@
     border: 3px;
     max-height: 77vh;
     max-width: 90vw;
+    min-height: 74vh;
+    min-width: 87vw;
     border-style: solid;
     border-color: var(--bd2);
     border-radius: 15px;
@@ -217,6 +219,8 @@
     .custom-container-bg {
         max-height: 60vh;
         max-width: 90vw;
+        min-height: 60vh;
+        min-width: 90vw;
     }
 }
 
@@ -224,6 +228,8 @@
     .custom-container-bg {
         max-height: 65vh;
         max-width: 90vw;
+        min-height: 65vh;
+        min-width: 90vw;
     }
 }
 
@@ -231,6 +237,8 @@
     .custom-container-bg {
         max-height: 70vh;
         max-width: 90vw;
+        min-height: 70vh;
+        min-width: 90vw;
     }
 }
 
@@ -238,12 +246,16 @@
     .custom-container-bg {
         max-height: 75vh;
         max-width: 90vw;
+        min-height: 75vh;
+        min-width: 90vw;
     }
-}
+} 
 
 @media (min-height: 900px) {
     .custom-container-bg {
         max-height: 77vh;
         max-width: 90vw;
+        min-height: 77vh;
+        min-width: 90vw;
     }
-}
+} 
