@@ -32,4 +32,8 @@ const loginFormHandler = async event => {
   }
 };
 
+$('#cancel').click(function(){
+  window.location.href='/';
+})
+
 $('#signupFormInput').on('submit', loginFormHandler);
