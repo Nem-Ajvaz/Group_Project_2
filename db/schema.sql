@@ -1,8 +1,8 @@
 -- DROP DATABASE
-DROP DATABASE IF EXISTS chirper_db
+DROP DATABASE IF EXISTS chirper_db;
 
 -- CREATE DATABASE
-CREATE DATABASE chirper_db
+CREATE DATABASE chirper_db;
 
 -- USE THE DATABASE
-USE chirper_db
+USE chirper_db;
