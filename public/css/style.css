@@ -170,14 +170,14 @@
     margin: 2%;
 }
 
-.custom-btn-signup {
+/* .custom-btn-signup {
     background-color: rgba(11, 105, 53, 0.61);
     width: 200px;
     margin: 2%;
     margin-left: 8%;
     float: left;
 }
-
+ */
 /* Styling the Input */
 .custom-field {
     position: fixed;
@@ -277,7 +277,7 @@
 }
 
 /* Styling width responsiveness */
-
+/* 
 @media (max-width: 1190px) {
     .custom-btn-signup {
         background-color: rgba(11, 105, 53, 0.61);
@@ -285,4 +285,4 @@
         margin: 2%;
         float: none;
     }
-}
+} */
