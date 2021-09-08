@@ -1,10 +1,15 @@
 /* Roots */
 :root {
+    /* background */
     --bg1: rgb(248, 244, 248);
-    --bd1: rgb(215, 204, 216);
-    --bg2: rgb(206, 233, 218);
-    --bd2: rgb(102, 165, 129);
+    --bg2: rgb(187, 231, 207);
     --bg3: rgb(237, 228, 238);
+    --bg4: rgb(226, 247, 235);
+    --bg5: rgb(197, 245, 219);
+    /* border */
+    --bd1: rgb(215, 191, 218);
+    --bd2: rgb(102, 165, 129);
+    --bd5: rgb(133, 187, 157);
 }
 
 /* Background Styling */
@@ -30,7 +35,7 @@
 }
 
 .custom-container-bg {
-    background-color: var(--bg2);
+    background-color: var(--bg4);
     padding: 5px;
     border: 3px;
     max-height: 77vh;
@@ -38,7 +43,7 @@
     min-height: 74vh;
     min-width: 87vw;
     border-style: solid;
-    border-color: var(--bd2);
+    border-color: var(--bd5);
     border-radius: 15px;
     overflow-y: auto;
     overflow: scroll;
@@ -46,7 +51,7 @@
 }
 
 .name-bg {
-    background-color: var(--bg2);
+    background-color: var(--bg5);
     padding: 3px;
     width: 30%;
     height: 30PX;
@@ -109,7 +114,7 @@
     height: auto;
     border: 2px;
     border-style: solid;
-    border-color: var(--bd2);
+    border-color: var(--bd5);
     border-radius: 15px;
     display: block;
     float: left;
@@ -170,14 +175,14 @@
     margin: 2%;
 }
 
-/* .custom-btn-signup {
+.custom-btn-signup {
     background-color: rgba(11, 105, 53, 0.61);
     width: 200px;
     margin: 2%;
     margin-left: 8%;
     float: left;
 }
- */
+
 /* Styling the Input */
 .custom-field {
     position: fixed;
@@ -277,7 +282,7 @@
 }
 
 /* Styling width responsiveness */
-/* 
+
 @media (max-width: 1190px) {
     .custom-btn-signup {
         background-color: rgba(11, 105, 53, 0.61);
@@ -285,4 +290,4 @@
         margin: 2%;
         float: none;
     }
-} */
+}
