@@ -31,7 +31,7 @@ socket.on('connect', () => {
 
     $userSendDetails.text('Nem sent a message at 9:12');
     $userMessage.addClass('owner-message');
-    $userSendDetails.addClass('owner-message'); //Class needs to be different between the message sent.
+    $userSendDetails.addClass('owner-timestap'); //Class needs to be different between the message sent.
 
     $userMessage.text(messageValue);
     $messageDetails.append($userMessage);
@@ -45,7 +45,7 @@ socket.on('connect', () => {
     const $userReceiveDetails = $('<p>');
 
     $userReceiveDetails.text('Received at 9:12');
-    $userReceiveDetails.addClass('guest-message');
+    $userReceiveDetails.addClass('guest-timestap');
     $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
 
     $messageReceived.text(data.message_content);
@@ -56,6 +56,7 @@ socket.on('connect', () => {
   socket.on('userAdded', data => {
     const newUser = $('<p>');
     newUser.text(`New user: ${data} has joined the chat`);
+    newUser.addClass('user-joined');
     $messageDetails.append(newUser);
   });
 
@@ -67,3 +68,8 @@ socket.on('connect', () => {
     console.log('data', data);
   });
 });
+
+$('#go-previous').click(function(){
+  window.location.href='/welcome';
+})
+
