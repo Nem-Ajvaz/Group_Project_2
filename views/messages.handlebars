@@ -1,4 +1,42 @@
-{{#if loggedIn}} 
+{{#if logged_in}} 
+    <nav class="navbar navbar-light">
+        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+
+        <div>
+            <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
+            <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
+
+        </div>
+    </nav>
+    <div id="messageDetails" class="container custom-container-bg mb-5">
+        <div class="row justify-content-center">
+            <header class="name-bg mx-auto text-center">{{{user.guest}}}</header>
+            <div class="col-sm-11 col-custom">
+                {{#each user as |guest|}}
+                    {{> guest-message}}
+                {{/each}}
+
+                {{#each user as |owner|}}
+                    {{> owner-message}}
+                {{/each}}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-8 mb-5 custom-field">
+                <form class="chat-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="send">Send</button>
+                        </div>
+                    </div>
+                </form>      
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/messages.js"></script>
+{{else}}
     <div class="card w-75 mx-auto custom-hp-bg text-center" style="width: 18rem;">
 	    <div class="card-body">
     		<h3 class="card-subtitle mb-2">~ You are not Signed in ~</h3>
@@ -8,46 +46,5 @@
             <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
 	    </div>
     </div>
-{{/if}}
-
-{{#if loggedIn}}
-{{else}}
-    <nav class="navbar navbar-light">
-        <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
-
-            <div>
-                <button type="button" id="go-previous" class="btn btn-outline-success">Go Back</button>
-                <button type="button" id="logout" class="btn btn-outline-dark">Log Out</button>
-
-            </div>
-        </nav>
-        <div id="messageDetails" class="container custom-container-bg mb-5">
-            <div class="row justify-content-center">
-                <header class="name-bg mx-auto text-center">{{{user.guest}}}</header>
-                <div class="col-sm-11 col-custom">
-                    {{#each user as |guest|}}
-                        {{> guest-message}}
-                    {{/each}}
-    
-                    {{#each user as |owner|}}
-                        {{> owner-message}}
-                    {{/each}}
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-8 mb-5 custom-field">
-                    <form class="chat-form">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="submit" id="send">Send</button>
-                            </div>
-                        </div>
-                    </form>      
-                </div>
-            </div>
-        </div>
-
-        <script src="/js/messages.js"></script>
 {{/if }} 
 
