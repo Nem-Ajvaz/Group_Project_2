@@ -36,13 +36,16 @@
     
     <script>"./js/logout.js"</script>
 {{else}}                   
-    <div class="card w-75 mx-auto custom-card-bg text-center" style="width: 18rem;">
-	    <div class="card-body">
-    		<h3 class="card-subtitle mb-2">~ You are not Signed in ~</h3>
-		    <br><br>
-		    <br><br>
-		    <button type="submit" id="signup-initial" class="btn custom-btn font-weight-bold px-md-5">Sign Up</button>
-            <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
-	    </div>
-    </div>
+        <nav class="navbar navbar-light">   
+            <img alt="Chirper" src="./assets/images/Chirper.png" class="custom-img">
+        </nav>
+        <div class="card w-75 mx-auto custom-card-bg text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h3 class="card-subtitle mb-2">~ You are not Signed in ~</h3>
+                <br><br>
+                <br><br>
+                <button type="submit" id="signup-initial" class="btn custom-btn font-weight-bold px-md-5">Sign Up</button>
+                <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
+            </div>
+        </div>
 {{/if }} 
