@@ -27,9 +27,7 @@ const loginFormHandler = async event => {
   }
 };
 
-$('#signup').click(function(){
-  window.location.href='/signup';
-})
+
 
 $('#cancel').click(function(){
   window.location.href='/';
