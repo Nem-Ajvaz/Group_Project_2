@@ -67,3 +67,8 @@ socket.on('connect', () => {
     console.log('data', data);
   });
 });
+
+$('#go-previous').click(function(){
+  window.location.href='/welcome';
+})
+
