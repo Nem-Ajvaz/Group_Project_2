@@ -3,25 +3,43 @@ const { User, Chat, UserChat } = require('../../models');
 const withAuth = require('../../utils/withAuth');
 const sequelize = require('sequelize');
 
-router.get('/', withAuth, async (req, res) => {
+// router.get('/', async (req, res) => {
+//   try {
+//     console.log('test');
+//     const userWithChats = await Chat.findAll({
+//       include: [{ model: User }]
+//     });
+
+//     console.log(userWithChats);
+//     res.json(userWithChats);
+//   } catch (e) {
+//     console.log(e);
+//     res.status(500).json(e);
+//   }
+// });
+
+router.get('/', async (req, res) => {
   try {
-    const userWithChats = await User.findAll({
-      where: {
-        user_id: 1
-      },
-      attributes: ['email'],
-      include: [
-        {
-          model: Chat,
-          attributes: ['chat_name']
-        }
-      ]
+    // const createChat = await UserChat.create({
+    //   u_s_e_r_user_id: 1,
+    //   c_h_a_t_chat_id: 4,
+    //   is_owner: true
+    // });
+
+    const newUser = await User.create({
+      user_id: 111,
+      username: 'harray',
+      email: 'tr@gmaial.com',
+      password: 'Passwoard1234'
     });
+    const newChat = await Chat.create({
+      chat_id: 15,
+      chat_name: 'Is LOTR ias better than GOT'
+    });
+    await newUser.addProfile(newChat, { through: { is_owner: true } });
+    // const result = await User.findOne({  where: { username: 'p4dm3' },  include: Profile});
 
-    const chats = userWithChats.Chats;
-
-    console.log(chats);
-    res.json(chats);
+    res.json(createChat);
   } catch (e) {
     console.log(e);
     res.status(500).json(e);
