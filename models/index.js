@@ -1,17 +1,17 @@
 const { Chat } = require('./Chat');
 const { User } = require('./User');
-const { User_chat } = require('./User_chat');
+const { UserChat } = require('./UserChat');
 const { Message } = require('./Message');
 
 // Defining associations between the models
 
 //TODO: Define between user and chat - many to many
 //Junction table is user_chat
-Chat.belongsToMany(User, { through: User_chat });
+Chat.belongsToMany(User, { through: 'USERCHAT' });
 
 //TODO: Define between chat and user - many to many
 //Junction table is user_chat
-User.belongsToMany(Chat, { through: User_chat });
+User.belongsToMany(Chat, { through: 'USERCHAT' });
 
 //TODO: Define between user and message - one to many
 User.hasMany(Message, {
@@ -38,6 +38,6 @@ Message.belongsTo(User, {
 module.exports = {
   Chat,
   User,
-  User_chat,
+  UserChat,
   Message
 };

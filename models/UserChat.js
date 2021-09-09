@@ -2,22 +2,22 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class User_chat extends Model {}
+class UserChat extends Model {}
 
-User_chat.init(
+UserChat.init(
   //Junction table for the user and chat id since it will be many to many.
   {
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'USER',
         key: 'user_id'
       }
     },
     chat_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'chat',
+        model: 'CHAT',
         key: 'chat_id'
       }
     },
@@ -30,8 +30,8 @@ User_chat.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'USER_CHAT'
+    modelName: 'USERCHAT'
   }
 );
 
-module.exports = { User_chat };
+module.exports = { UserChat };
