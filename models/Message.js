@@ -19,17 +19,22 @@ Message.init(
     chat_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'chat',
+        model: 'CHAT',
         key: 'chat_id'
       }
     },
     sender_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'USER',
         key: 'user_id'
       }
-    }   
+    },
+    created_at: {
+      type: 'TIMESTAMP',
+      defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+      allowNull: false
+    }
   },
   {
     sequelize,

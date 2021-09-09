@@ -5,6 +5,12 @@ const { Message } = require('../../models');
 router.get('/message', async (req, res) => {
   try {
     const findAllMessages = await Message.findAll({});
+
+    const userMessage = findAllMessages.map(message =>
+      message.get({ plain: true })
+    );
+
+    console.log(userMessage);
     console.log(findAllMessages);
     res.status(200).json(findAllMessages);
   } catch (e) {
@@ -12,8 +18,6 @@ router.get('/message', async (req, res) => {
     res.status(500).json({ message: 'SOMETHING WENT WRONG' });
   }
 });
-
-
 
 module.exports = router;
 
