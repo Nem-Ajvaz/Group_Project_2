@@ -4,7 +4,8 @@ const { Message } = require('../../models');
 // expect the body to have the chat id
 router.get('/message', async (req, res) => {
   try {
-    const findAllMessages = await Message.findAll();
+    const findAllMessages = await Message.findAll({});
+    console.log(findAllMessages);
     res.status(200).json(findAllMessages);
   } catch (e) {
     console.log(e);

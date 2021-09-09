@@ -13,8 +13,12 @@ router.post('/signin', async (req, res) => {
         });
         return;
       }
-      console.log('testing');
-      console.log(req.session);
+      const validPassword = userData.checkPassword(req.body.password);
+
+          if (!validPassword) {
+              res.status(400).json({ message: 'Incorrect password!' });
+              return;
+          }
 
       req.session.save(() => {
         req.session.id = userData.user_id;
@@ -29,10 +33,11 @@ router.post('/signin', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.logged_in) {
+  if (req.session.logged_in) {    
     req.session.destroy(() => {
-      res.status(204).end();
+      res.status(204).end();         
     });
+    
   } else {
     res.status(404).end();
   }
