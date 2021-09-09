@@ -188,6 +188,7 @@
     position: fixed;
     bottom: 0;
     padding: 5px;
+    padding-bottom: 15px;
 }
 
 .custom-field2 {
