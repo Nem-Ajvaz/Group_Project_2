@@ -14,7 +14,7 @@
                     <h2 id="welcome">Welcome {{{user}}}</h2>
                     <div class="row justify-content-center">
                         <div class="col-sm-8 mb-5 custom-field2">
-                            <form class="chat-form">
+                            <form class="chat-form" id="create-chat">
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
                                     <div class="input-group-append">
@@ -26,14 +26,17 @@
                     </div>
                 </div>
 
-                {{#each user  as |Administrator|}}
-                    {{> chats}}
-                {{/each}}
+                                               
+                <div id="chatList">
+                    
+                </div>
+                
 
             </div>
         </div>
     </div>
-    <script src="/js/chatroom.js"></script>
+    <script src="/js/existingChatRooms.js"></script>
+    <script src="/js/createChatRoom.js"></script>
     <script src="/js/logout.js"></script>
     {{!-- {{else}}                   
         <nav class="navbar navbar-light">   

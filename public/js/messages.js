@@ -5,6 +5,7 @@ const $formElem = $('form');
 const $messageInput = $('#message-input');
 const $messageDetails = $('#messageDetails');
 
+
 socket.on('connect', () => {
   function formatDate(date) {
     return moment(date).format('h:mm a');

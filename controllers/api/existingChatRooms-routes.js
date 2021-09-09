@@ -18,17 +18,17 @@ const sequelize = require('sequelize');
 //   }
 // });
 
-router.get('/', async (req, res) => {
+router.get('/welcome', async (req, res) => {
   try {
-    // const createChat = await UserChat.create({
-    //   u_s_e_r_user_id: 1,
-    //   c_h_a_t_chat_id: 4,
-    //   is_owner: true
-    // });
-
-    const result = await UserChat.create({ UserId: 1, ChatId: 1 });
-
-    res.json(createChat);
+    
+    const renderChatRooms = await User.findAll({
+      where: { id : 1 },
+      include: [{ model: Chat }]
+    });  
+    
+    console.log(renderChatRooms);
+    
+    res.json(renderChatRooms);
   } catch (e) {
     console.log(e);
     res.status(500).json(e);
