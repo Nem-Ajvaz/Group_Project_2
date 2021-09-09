@@ -11,10 +11,11 @@ class User extends Model {
 User.init(
   //TODO: Define the model for users
   {
-    user_id: {
+    id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     username: {
       type: DataTypes.STRING(30),
@@ -49,7 +50,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'USER'
+    modelName: 'User'
   }
 );
 

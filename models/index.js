@@ -7,11 +7,7 @@ const { Message } = require('./Message');
 
 //TODO: Define between user and chat - many to many
 //Junction table is user_chat
-Chat.belongsToMany(User, { through: 'USERCHAT' });
-
-//TODO: Define between chat and user - many to many
-//Junction table is user_chat
-User.belongsToMany(Chat, { through: 'USERCHAT' });
+User.belongsToMany(Chat, { through: 'UserChat' });
 
 //TODO: Define between user and message - one to many
 User.hasMany(Message, {

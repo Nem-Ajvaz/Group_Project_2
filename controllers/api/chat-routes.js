@@ -26,18 +26,7 @@ router.get('/', async (req, res) => {
     //   is_owner: true
     // });
 
-    const newUser = await User.create({
-      user_id: 111,
-      username: 'harray',
-      email: 'tr@gmaial.com',
-      password: 'Passwoard1234'
-    });
-    const newChat = await Chat.create({
-      chat_id: 15,
-      chat_name: 'Is LOTR ias better than GOT'
-    });
-    await newUser.addProfile(newChat, { through: { is_owner: true } });
-    // const result = await User.findOne({  where: { username: 'p4dm3' },  include: Profile});
+    const result = await UserChat.create({ UserId: 1, ChatId: 1 });
 
     res.json(createChat);
   } catch (e) {

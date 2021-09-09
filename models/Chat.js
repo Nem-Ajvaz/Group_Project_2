@@ -7,10 +7,11 @@ class Chat extends Model {}
 Chat.init(
   //TODO: Define the model for chats
   {
-    chat_id: {
+    id: {
       type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
     },
     chat_name: {
       type: DataTypes.STRING(255),
@@ -22,7 +23,7 @@ Chat.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'CHAT'
+    modelName: 'Chat'
   }
 );
 

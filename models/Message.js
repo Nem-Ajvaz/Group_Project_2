@@ -7,8 +7,9 @@ class Message extends Model {}
 Message.init(
   //TODO: Define the model for message
   {
-    message_id: {
+    id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
@@ -20,14 +21,14 @@ Message.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'CHAT',
-        key: 'chat_id'
+        key: 'id'
       }
     },
     sender_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'USER',
-        key: 'user_id'
+        key: 'id'
       }
     },
     created_at: {
@@ -41,7 +42,7 @@ Message.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'MESSAGES'
+    modelName: 'Messages'
   }
 );
 
