@@ -1,4 +1,5 @@
 const $signinForm = $('#signinFormele');
+const $attachAlert = $('#attach');
 
 const loginFormHandler = async event => {
   event.preventDefault();
@@ -22,7 +23,11 @@ const loginFormHandler = async event => {
     if (response.ok) {
       document.location.replace('/welcome');
     } else {
-      alert('Failed to log in');
+      const signinUser = $('<div>');
+      signinUser.text(`Signin Failed! Invalid username or password`);
+      signinUser.addClass('alert alert-danger');
+      signinUser.attr('role', 'alert');
+      $attachAlert.append(signinUser);
     }
   }
 };
