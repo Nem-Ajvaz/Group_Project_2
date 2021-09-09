@@ -3,9 +3,9 @@ const bcrypt = require('bcryptjs');
 const sequelize = require('../config/connection.js');
 
 class User extends Model {
-  checkPassword(userLoginPassword) {
-    return bcrypt.compareSync(userLoginPassword, this.password);
-  }
+  // checkPassword(userLoginPassword) {
+  //   return bcrypt.compareSync(userLoginPassword, this.password);
+  // }
 }
 
 User.init(
@@ -32,19 +32,19 @@ User.init(
     }
   },
   {
-    hooks: {
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-      async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      }
-    },
+    // hooks: {
+    //   async beforeCreate(newUserData) {
+    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+    //     return newUserData;
+    //   },
+    //   async beforeUpdate(updatedUserData) {
+    //     updatedUserData.password = await bcrypt.hash(
+    //       updatedUserData.password,
+    //       10
+    //     );
+    //     return updatedUserData;
+    //  }},
+
     sequelize,
     timestamps: false,
     freezeTableName: true,
