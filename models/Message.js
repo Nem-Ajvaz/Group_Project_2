@@ -19,14 +19,14 @@ Message.init(
     chat_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'chat',
+        model: 'Chat',
         key: 'chat_id'
       }
     },
     sender_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'User',
         key: 'user_id'
       }
     }
@@ -41,7 +41,7 @@ Message.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'MESSAGES'
+    modelName: 'Message'
   }
 );
 

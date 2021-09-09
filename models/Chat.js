@@ -14,7 +14,8 @@ Chat.init(
     },
     chat_name: {
       type: DataTypes.STRING(255),
-      unique: true
+      unique: true,
+      allowNull: false
     }
   },
   {
@@ -22,7 +23,7 @@ Chat.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'CHAT'
+    modelName: 'Chat'
   }
 );
 

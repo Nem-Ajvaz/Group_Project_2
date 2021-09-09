@@ -69,7 +69,12 @@ socket.on('connect', () => {
   });
 });
 
-$('#go-previous').click(function(){
-  window.location.href='/welcome';
-})
+$('#go-previous').click(function() {
+  window.location.href = '/welcome';
+});
 
+$(document).ready(async () => {
+  const response = await fetch('/api/message');
+  const data = await response.json();
+  console.log(data, 'here');
+});

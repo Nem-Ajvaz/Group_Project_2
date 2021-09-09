@@ -7,17 +7,22 @@ class User_chat extends Model {}
 User_chat.init(
   //Junction table for the user and chat id since it will be many to many.
   {
+    user_chat_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'User',
         key: 'user_id'
       }
     },
     chat_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'chat',
+        model: 'Chat',
         key: 'chat_id'
       }
     },
@@ -30,7 +35,7 @@ User_chat.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'USER_CHAT'
+    modelname: 'User_chat'
   }
 );
 

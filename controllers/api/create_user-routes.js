@@ -6,9 +6,10 @@ router.post('/signup', async (req, res) => {
     ...req.body
   })
     .then(userData => {
+      console.log(userData);
       req.session.save(() => {
+        req.session.id = userData.user_id;
         req.session.username = userData.username;
-        req.session.password = userData.password;
         req.session.email = userData.email;
         req.session.logged_in = true;
         res.status(200).json(userData);

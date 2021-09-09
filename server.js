@@ -21,7 +21,7 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
-  // cookie: { maxAge: 300, httpOnly: true, secure: false, sameSite: 'strict' },
+  cookie: { maxAge: 300, httpOnly: true, secure: false, sameSite: 'strict' },
   rolling: true,
   resave: true,
   saveUninitialized: true,
@@ -36,10 +36,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/session', (req, res) => {
-  console.log(req.session.id);
-  res.send('hello mate');
-});
+// app.get('/session', (req, res) => {
+//   console.log(req.session.id);
+//   res.send('hello mate');
+// });
 
 app.use(cors());
 app.use(routes);
