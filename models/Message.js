@@ -29,12 +29,7 @@ Message.init(
         model: 'user',
         key: 'user_id'
       }
-    }
-    // created_at: {
-    //   type: 'TIMESTAMP',
-    //   defaultValue: literal('CURRENT_TIMESTAMP'),
-    //   allowNull: false
-    // }
+    }   
   },
   {
     sequelize,
