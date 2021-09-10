@@ -50,6 +50,21 @@
     overflow-x: hidden;
 }
 
+.custom-container-bg2 {
+    padding: 5px;
+    border: 3px;
+    max-height: 71vh;
+    max-width: 60vw;
+    min-height: 70vh;
+    min-width: 57vw;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: var(--bd5);
+    overflow-y: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
 .name-bg {
     background-color: var(--bg5);
     padding: 3px;
@@ -192,8 +207,8 @@
 }
 
 .custom-field2 {
-    min-width: 50vw;
-    max-width: 110vh;
+    min-width: 40vw;
+    max-width: 100vh;
     padding: 5px;
 }
 
@@ -201,6 +216,10 @@
 .col-custom {
     margin-bottom: 5%;
     margin-top: 5%;
+}
+
+.col-custom2 {
+    margin-bottom: 5%;
 }
 
 /* Styling the -user- joined message */
@@ -237,6 +256,7 @@
 }
 
 /* Styling height responsiveness */
+/* 500px */
 @media (min-height: 500px) {
     .custom-container-bg {
         max-height: 60vh;
@@ -244,8 +264,16 @@
         min-height: 60vh;
         min-width: 90vw;
     }
+
+    .custom-container-bg2 {
+        max-height: 63vh;
+        max-width: 60vw;
+        min-height: 62vh;
+        min-width: 57vw;
+    }
 }
 
+/* 600px */
 @media (min-height: 600px) {
     .custom-container-bg {
         max-height: 65vh;
@@ -253,8 +281,16 @@
         min-height: 65vh;
         min-width: 90vw;
     }
+
+    .custom-container-bg2 {
+        max-height: 65vh;
+        max-width: 60vw;
+        min-height: 64vh;
+        min-width: 57vw;
+    }
 }
 
+/* 700px */
 @media (min-height: 700px) {
     .custom-container-bg {
         max-height: 70vh;
@@ -262,8 +298,16 @@
         min-height: 70vh;
         min-width: 90vw;
     }
+
+    .custom-container-bg2 {
+        max-height: 67vh;
+        max-width: 60vw;
+        min-height: 66vh;
+        min-width: 57vw;
+    }
 }
 
+/* 800px */
 @media (min-height: 800px) {
     .custom-container-bg {
         max-height: 75vh;
@@ -271,14 +315,29 @@
         min-height: 75vh;
         min-width: 90vw;
     }
+
+    .custom-container-bg2 {
+        max-height: 69vh;
+        max-width: 60vw;
+        min-height: 68vh;
+        min-width: 57vw;
+    }
 } 
 
+/* 900px */
 @media (min-height: 900px) {
     .custom-container-bg {
         max-height: 77vh;
         max-width: 90vw;
         min-height: 77vh;
         min-width: 90vw;
+    }
+
+    .custom-container-bg2 {
+        max-height: 71vh;
+        max-width: 60vw;
+        min-height: 70vh;
+        min-width: 57vw;
     }
 }
 
