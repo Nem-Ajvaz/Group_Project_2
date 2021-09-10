@@ -1,22 +1,26 @@
-// const $createRoom =  $('#create-chat')
+const $createRoom = $('#create-chat');
+const $messageInputEle = $('#message-input');
 
-// $createRoom.on('submit', async (e)=>{
-//     e.preventDefault()
-//     const response = await fetch('/api/createChatRoom/welcome');
-//     const existingChatRooms = await response.json();
+$createRoom.on('submit', async e => {
+  e.preventDefault();
+  // console.log('hi guys');
+  const inputText = $messageInputEle
+    .val()
+    .toLowerCase()
+    .trim();
+  console.log(inputText);
 
-//     if (!existingChatRooms){
-//         console.log("this doesn't  exist")
-//       } else {
-//         for (let i =0; i < existingChatRooms.length; i++ ){
-//           if (existingChatRooms[i]){
-//             const $chatRooms = $('<ul>');
-//             $chatRooms.text(existingChatRooms[i].chat_name);
-//             $chatRooms.addClass('btn chats btn-lg btn-block');
-//             $chatRoomList.append($chatRooms);
-//           }
-//         }
-//       }
-    
-//   });
-  
+  const checkExistingChatRoom = await fetch('/api/createChatRoom/welcome', {
+    method: 'POST',
+    body: JSON.stringify({ inputText }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const existingChatRooms = await checkExistingChatRoom.json();
+  if (existingChatRooms) {
+    location.reload();
+  }
+
+  console.log(existingChatRooms);
+});

@@ -12,10 +12,10 @@ UserChat.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
+    },
+    is_owner: {
+      type: DataTypes.BOOLEAN
     }
-    //   is_owner: {
-    //     type: DataTypes.BOOLEAN
-    //   }
   },
 
   {

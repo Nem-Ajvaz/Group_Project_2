@@ -3,28 +3,33 @@ const { User, Chat, UserChat } = require('../../models');
 const withAuth = require('../../utils/withAuth');
 const sequelize = require('sequelize');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     console.log('test');
-//     const userWithChats = await Chat.findAll({
-//       include: [{ model: User }]
-//     });
-
-//     console.log(userWithChats);
-//     res.json(userWithChats);
-//   } catch (e) {
-//     console.log(e);
-//     res.status(500).json(e);
-//   }
-// });
-
-router.get('/welcome', async (req, res) => {
+router.post('/welcome', async (req, res) => {
   try {
-    
-    const renderChatRooms = await Chat.findAll({});  
-    
+    let userChatInput = req.body.inputText;
+    // console.log(userChatInput);
+    const renderChatRooms = await Chat.findAll({
+      where: { chat_name: userChatInput }
+    });
+
     console.log(renderChatRooms);
-    
+    if (renderChatRooms.length > 0) {
+      const createAssociations = UserChat.create({
+        UserId: 1,
+        ChatId: 4,
+        is_owner: 0
+      });
+    } else {
+      const createRoom = Chat.create({
+        chat_name: userChatInput
+      }).then(response => {
+        const createAssociations = UserChat.create({
+          UserId: 1,
+          ChatId: response.id,
+          is_owner: 0
+        });
+      });
+    }
+
     res.json(renderChatRooms);
   } catch (e) {
     console.log(e);

@@ -1,33 +1,27 @@
 const router = require('express').Router();
-const { User, Chat, UserChat } = require('../../models');
+const { User, Chat, User_chat } = require('../../models');
 const withAuth = require('../../utils/withAuth');
 const sequelize = require('sequelize');
 
-// router.get('/', async (req, res) => {
-//   try {
-//     console.log('test');
-//     const userWithChats = await Chat.findAll({
-//       include: [{ model: User }]
-//     });
-
-//     console.log(userWithChats);
-//     res.json(userWithChats);
-//   } catch (e) {
-//     console.log(e);
-//     res.status(500).json(e);
-//   }
-// });
-
-router.get('/welcome', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
-    const renderChatRooms = await User.findAll({
-      where: { id: 1 },
-      include: [{ model: Chat }]
+    const userWithChats = await User.findAll({
+      where: {
+        user_id: 1
+      },
+      attributes: ['email'],
+      include: [
+        {
+          model: Chat,
+          attributes: ['chat_name']
+        }
+      ]
     });
 
-    //console.log(renderChatRooms);
+    const chats = userWithChats.Chats;
 
-    res.json(renderChatRooms);
+    console.log(chats);
+    res.json(chats);
   } catch (e) {
     console.log(e);
     res.status(500).json(e);
