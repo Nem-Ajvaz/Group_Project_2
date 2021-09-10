@@ -10,7 +10,8 @@ const getId = async obj => {
   });
   const response = await sendToChatRoom.json();
   if (response) {
-    document.location.replace('/chat');
+    console.log(response);
+    document.location.replace(`/chat/${response}`);
     console.log(response);
   }
 };

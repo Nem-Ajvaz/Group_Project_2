@@ -24,7 +24,7 @@ router.get('/messages', async (req, res) => {
   try {
     const findAllMessages = await Message.findAll({});
 
-    console.log(findAllMessages);
+    //console.log(findAllMessages);
     res.status(200).json(findAllMessages);
   } catch (e) {
     console.log(e);

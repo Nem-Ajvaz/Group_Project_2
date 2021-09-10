@@ -16,7 +16,7 @@ router.get('/welcome', (req, res) => {
   res.render('welcome');
 });
 
-router.get('/chat', (req, res) => {
+router.get('/chat/:id', (req, res) => {
   res.render('chat');
 });
 
