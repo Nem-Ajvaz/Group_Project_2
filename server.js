@@ -36,6 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//To test session and session IDS
 app.get('/session', (req, res) => {
   console.log(req.session.id);
   res.send('hello mate');
