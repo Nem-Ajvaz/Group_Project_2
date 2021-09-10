@@ -1,8 +1,26 @@
 const router = require('express').Router();
-const { Message } = require('../../models');
+const { Message, Chat } = require('../../models');
 
 // expect the body to have the chat id
-router.get('/message', async (req, res) => {
+//Change name at a later date
+router.post('/chatMessage', async (req, res) => {
+  try {
+    console.log(req.body);
+    const findMessageChatId = await Chat.findAll({
+      raw: true,
+      where: { chat_name: req.body.chatroomName }
+    });
+
+    console.log(findMessageChatId[0].id);
+
+    res.status(200).json(findMessageChatId[0].id);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ message: 'SOMETHING WENT WRONG' });
+  }
+});
+
+router.get('/messages', async (req, res) => {
   try {
     const findAllMessages = await Message.findAll({});
 

@@ -23,6 +23,7 @@ const loginFormHandler = async event => {
     if (response.ok) {
       document.location.replace('/welcome');
     } else {
+      $attachAlert.empty();
       const signinUser = $('<div>');
       signinUser.text(`Signin Failed! Invalid username or password`);
       signinUser.addClass('alert alert-danger');
@@ -32,11 +33,9 @@ const loginFormHandler = async event => {
   }
 };
 
-
-
-$('#cancel').click(function(){
-  window.location.href='/';
-})
+$('#cancel').click(function() {
+  window.location.href = '/';
+});
 
 $signinForm.on('submit', loginFormHandler);
 

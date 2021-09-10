@@ -9,17 +9,15 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/signin', (req, res) => {
-  
   res.render('signin');
 });
 
 router.get('/welcome', (req, res) => {
-  
   res.render('welcome');
 });
 
-router.get('/messages', (req, res) => {
-  res.render('messages');
+router.get('/chat', (req, res) => {
+  res.render('chat');
 });
 
 module.exports = router;

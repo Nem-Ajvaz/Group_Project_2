@@ -1,347 +1,347 @@
 /* Roots */
 :root {
-    /* background */
-    --bg1: rgb(248, 244, 248);
-    --bg2: rgb(187, 231, 207);
-    --bg3: rgb(237, 228, 238);
-    --bg4: rgb(226, 247, 235);
-    --bg5: rgb(197, 245, 219);
-    /* border */
-    --bd1: rgb(215, 191, 218);
-    --bd2: rgb(102, 165, 129);
-    --bd5: rgb(133, 187, 157);
+  /* background */
+  --bg1: rgb(248, 244, 248);
+  --bg2: rgb(187, 231, 207);
+  --bg3: rgb(237, 228, 238);
+  --bg4: rgb(226, 247, 235);
+  --bg5: rgb(197, 245, 219);
+  /* border */
+  --bd1: rgb(215, 191, 218);
+  --bd2: rgb(102, 165, 129);
+  --bd5: rgb(133, 187, 157);
 }
 
 /* Background Styling */
 .custom-hp-bg {
-    background-color: var(--bg1);
-    position: static;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+  background-color: var(--bg1);
+  position: static;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .custom-card-bg {
-    background-color: var(--bg3);
-    position: static;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+  background-color: var(--bg3);
+  position: static;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .custom-ft-bg {
-    background-color: var(--bd1);
-    height: 40px;
+  background-color: var(--bd1);
+  height: 40px;
 }
 
 .custom-container-bg {
-    background-color: var(--bg4);
-    padding: 5px;
-    border: 3px;
-    max-height: 77vh;
-    max-width: 90vw;
-    min-height: 74vh;
-    min-width: 87vw;
-    border-style: solid;
-    border-color: var(--bd5);
-    border-radius: 15px;
-    overflow-y: auto;
-    overflow: scroll;
-    overflow-x: hidden;
+  background-color: var(--bg4);
+  padding: 5px;
+  border: 3px;
+  max-height: 77vh;
+  max-width: 90vw;
+  min-height: 74vh;
+  min-width: 87vw;
+  border-style: solid;
+  border-color: var(--bd5);
+  border-radius: 15px;
+  overflow-y: auto;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .custom-container-bg2 {
-    padding: 5px;
-    border: 3px;
-    max-height: 65vh;
-    max-width: 60vw;
-    min-height: 60vh;
-    border-radius: 15px;
-    border-style: solid;
-    border-color: var(--bd5);
-    overflow-y: auto;
-    overflow: scroll;
-    overflow-x: hidden;
+  padding: 5px;
+  border: 3px;
+  max-height: 65vh;
+  max-width: 60vw;
+  min-height: 60vh;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: transparent;
+  overflow-y: auto;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .name-bg {
-    background-color: var(--bg5);
-    padding: 3px;
-    width: 30%;
-    height: 30PX;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--bd2);
-    border-radius: 15px;
-    position: fixed;
-    overflow: hidden;
-    justify-self: center;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+  background-color: var(--bg5);
+  padding: 3px;
+  width: 30%;
+  height: 30px;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd2);
+  border-radius: 15px;
+  position: fixed;
+  overflow: hidden;
+  justify-self: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 
 /* Header Styling */
 .welcome {
-    margin-bottom: 5%;
-    margin-top: -10%;
-    margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: -10%;
+  margin-left: 5%;
 }
 
 /* Image Styling */
 .custom-img {
-    padding: 5px;
-    width: 300px;
+  padding: 5px;
+  width: 300px;
 }
 
 .gmail-custom {
-    padding: 5px;
-    width: 50px;
-    height: 40px;
+  padding: 5px;
+  width: 50px;
+  height: 40px;
 }
 
 .gmail-custom:hover {
-    padding: 5px;
-    width: 45px;
-    height: 35px;
-    border-radius: 5px;
+  padding: 5px;
+  width: 45px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 .github-custom {
-    padding: 5px;
-    width: 40px;
-    height: 40px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
 }
 
 .github-custom:hover {
-    padding: 5px;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
+  padding: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
 }
 
 /* Message Styling */
 .guest-message {
-    background-color: var(--bg2);
-    padding: 8px;
-    width: auto;
-    height: auto;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--bd5);
-    border-radius: 15px;
-    display: block;
-    float: left;
-    clear: both;
+  background-color: var(--bg2);
+  padding: 8px;
+  width: auto;
+  height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd5);
+  border-radius: 15px;
+  display: block;
+  float: left;
+  clear: both;
 }
 
 .owner-message {
-    background-color: var(--bg1);
-    padding: 5px;
-    width: auto;
-    height: auto;
-    border: 2px;
-    border-style: solid;
-    border-color: var(--bd1);
-    border-radius: 15px;
-    display: block;
-    float: right;
-    clear: both;
+  background-color: var(--bg1);
+  padding: 5px;
+  width: auto;
+  height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd1);
+  border-radius: 15px;
+  display: block;
+  float: right;
+  clear: both;
 }
 
 /* Timestamp Styling */
 .guest-timestap {
-    padding: 1px;
-    display: block;
-    float: left;
-    clear: both;
-    font-style: italic;
-    color: rgb(112, 112, 112);
-    line-height: 2px;
-    font-size: smaller;
+  padding: 1px;
+  display: block;
+  float: left;
+  clear: both;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+  line-height: 2px;
+  font-size: smaller;
 }
 
 .owner-timestap {
-    padding: 1px;
-    display: block;
-    float: right;
-    clear: both;
-    font-style: italic;
-    color: rgb(112, 112, 112);
-    line-height: 2px;
-    font-size: smaller;
+  padding: 1px;
+  display: block;
+  float: right;
+  clear: both;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+  line-height: 2px;
+  font-size: smaller;
 }
 
 /* Button Styling */
 .chats {
-    background-color: var(--bg2);
-    padding: 10px;
-    border: 2px;
-    border-style: solid;
-    border-color: rgba(11, 105, 53, 0.295);
-    border-radius: 15px;
-    line-height: 10px;
+  background-color: var(--bg2);
+  padding: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: rgba(11, 105, 53, 0.295);
+  border-radius: 15px;
+  line-height: 10px;
 }
 
 .custom-btn {
-    background-color: rgba(11, 105, 53, 0.61);
-    width: 200px;
-    margin: 2%;
+  background-color: rgba(11, 105, 53, 0.61);
+  width: 200px;
+  margin: 2%;
 }
 
 .custom-btn-signup {
-    background-color: rgba(11, 105, 53, 0.61);
-    width: 200px;
-    margin: 2%;
-    margin-left: 8%;
-    float: left;
+  background-color: rgba(11, 105, 53, 0.61);
+  width: 200px;
+  margin: 2%;
+  margin-left: 8%;
+  float: left;
 }
 
 /* Styling the Input */
 .custom-field {
-    position: fixed;
-    bottom: 0;
-    padding: 5px;
-    padding-bottom: 15px;
+  position: fixed;
+  bottom: 0;
+  padding: 5px;
+  padding-bottom: 15px;
 }
 
 .custom-field2 {
-    min-width: 40vw;
-    max-width: 100vh;
-    padding: 5px;
+  min-width: 40vw;
+  max-width: 100vh;
+  padding: 5px;
 }
 
 /* Styling the  */
 .col-custom {
-    margin-bottom: 5%;
-    margin-top: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .col-custom2 {
-    margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 /* Styling the -user- joined message */
 .user-joined {
-    padding: 5px;
-    display: block;
-    text-align: center;
-    clear: both;
-    font-style: italic;
-    color: rgb(112, 112, 112);
-    line-height: 2px;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  clear: both;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+  line-height: 2px;
 }
 
 /* Styling the scroll bar */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg2);
-    border-radius: 20px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+  background: var(--bg2);
+  border-radius: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(210, 144, 226);
-    border-radius: 15px;
+  background: rgb(210, 144, 226);
+  border-radius: 15px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(156, 5, 136);
-    border-radius: 15px;
+  background: rgb(156, 5, 136);
+  border-radius: 15px;
 }
 
 /* Styling height responsiveness */
 /* 500px */
 @media (min-height: 500px) {
-    .custom-container-bg {
-        max-height: 60vh;
-        max-width: 90vw;
-        min-height: 60vh;
-        min-width: 90vw;
-    }
+  .custom-container-bg {
+    max-height: 60vh;
+    max-width: 90vw;
+    min-height: 60vh;
+    min-width: 90vw;
+  }
 
-    .custom-container-bg2 {
-        max-height: 57vh;
-        max-width: 60vw;
-        min-height: 52vh;
-    }
+  .custom-container-bg2 {
+    max-height: 57vh;
+    max-width: 60vw;
+    min-height: 52vh;
+  }
 }
 
 /* 600px */
 @media (min-height: 600px) {
-    .custom-container-bg {
-        max-height: 65vh;
-        max-width: 90vw;
-        min-height: 65vh;
-        min-width: 90vw;
-    }
+  .custom-container-bg {
+    max-height: 65vh;
+    max-width: 90vw;
+    min-height: 65vh;
+    min-width: 90vw;
+  }
 
-    .custom-container-bg2 {
-        max-height: 59vh;
-        max-width: 60vw;
-        min-height: 54vh;
-    }
+  .custom-container-bg2 {
+    max-height: 59vh;
+    max-width: 60vw;
+    min-height: 54vh;
+  }
 }
 
 /* 700px */
 @media (min-height: 700px) {
-    .custom-container-bg {
-        max-height: 70vh;
-        max-width: 90vw;
-        min-height: 70vh;
-        min-width: 90vw;
-    }
+  .custom-container-bg {
+    max-height: 70vh;
+    max-width: 90vw;
+    min-height: 70vh;
+    min-width: 90vw;
+  }
 
-    .custom-container-bg2 {
-        max-height: 61vh;
-        max-width: 60vw;
-        min-height: 56vh;
-    }
+  .custom-container-bg2 {
+    max-height: 61vh;
+    max-width: 60vw;
+    min-height: 56vh;
+  }
 }
 
 /* 800px */
 @media (min-height: 800px) {
-    .custom-container-bg {
-        max-height: 75vh;
-        max-width: 90vw;
-        min-height: 75vh;
-        min-width: 90vw;
-    }
+  .custom-container-bg {
+    max-height: 75vh;
+    max-width: 90vw;
+    min-height: 75vh;
+    min-width: 90vw;
+  }
 
-    .custom-container-bg2 {
-        max-height: 63vh;
-        max-width: 60vw;
-        min-height: 58vh;
-    }
-} 
+  .custom-container-bg2 {
+    max-height: 63vh;
+    max-width: 60vw;
+    min-height: 58vh;
+  }
+}
 
 /* 900px */
 @media (min-height: 900px) {
-    .custom-container-bg {
-        max-height: 77vh;
-        max-width: 90vw;
-        min-height: 77vh;
-        min-width: 90vw;
-    }
+  .custom-container-bg {
+    max-height: 77vh;
+    max-width: 90vw;
+    min-height: 77vh;
+    min-width: 90vw;
+  }
 
-    .custom-container-bg2 {
-        max-height: 65vh;
-        max-width: 60vw;
-        min-height: 60vh;
-    }
+  .custom-container-bg2 {
+    max-height: 65vh;
+    max-width: 60vw;
+    min-height: 60vh;
+  }
 }
 
 /* Styling width responsiveness */
 
 @media (max-width: 1190px) {
-    .custom-btn-signup {
-        background-color: rgba(11, 105, 53, 0.61);
-        width: 200px;
-        margin: 2%;
-        float: none;
-    }
+  .custom-btn-signup {
+    background-color: rgba(11, 105, 53, 0.61);
+    width: 200px;
+    margin: 2%;
+    float: none;
+  }
 }

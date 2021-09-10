@@ -5,7 +5,6 @@ const $formElem = $('form');
 const $messageInput = $('#message-input');
 const $messageDetails = $('#messageDetails');
 
-
 socket.on('connect', () => {
   function formatDate(date) {
     return moment(date).format('h:mm a');
@@ -84,7 +83,7 @@ $('#go-previous').click(function() {
 //messageDetails
 
 $(document).ready(async () => {
-  const response = await fetch('/api/message');
+  const response = await fetch('/api/messages');
   const messageHistory = await response.json();
   console.log(messageHistory);
   if (!messageHistory) {

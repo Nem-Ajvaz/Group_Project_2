@@ -10,13 +10,18 @@ $(document).ready(async () => {
   const response = await fetch('/api/existingChatRoom/welcome');
   const renderChatRooms = await response.json();
   // console.log(renderChatRooms);
+  const $chatRooms = $('<ul>');
+  $chatRooms.attr('id', 'roomList');
+  $chatRoomList.append($chatRooms);
   for (let i = 0; i < renderChatRooms[0].Chats.length; i++) {
     if (renderChatRooms[0].Chats[i].chat_name) {
-      // console.log(renderChatRooms[0].Chats[i].chat_name);
-      const $chatRooms = $('<ul>');
-      $chatRooms.text(renderChatRooms[0].Chats[i].chat_name);
-      $chatRooms.addClass('btn chats btn-lg btn-block');
-      $chatRoomList.append($chatRooms);
+      const $chatRoomItems = $('<li>');
+      $chatRoomItems.attr('id', renderChatRooms[0].Chats[i].chat_name);
+      $chatRoomItems.attr('onclick', 'getId(this)');
+      $chatRoomItems.text(renderChatRooms[0].Chats[i].chat_name);
+      $chatRoomItems.addClass('btn chats btn-lg btn-block');
+
+      $chatRooms.append($chatRoomItems);
     }
   }
 });
