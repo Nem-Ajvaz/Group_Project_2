@@ -29,6 +29,7 @@ const loginFormHandler = async event => {
     if (response.ok) {
       document.location.replace('/welcome');
     } else {
+      $attachAlert.empty();
       const signupUser = $('<div>');
       signupUser.text(`Signup Failed! Username or email is already taken`);
       signupUser.addClass('alert alert-danger');
@@ -38,8 +39,8 @@ const loginFormHandler = async event => {
   }
 };
 
-$('#cancel').click(function(){
-  window.location.href='/';
-})
+$('#cancel').click(function() {
+  window.location.href = '/';
+});
 
 $('#signupFormInput').on('submit', loginFormHandler);
