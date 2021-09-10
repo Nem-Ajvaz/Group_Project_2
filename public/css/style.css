@@ -101,10 +101,7 @@
 }
 
 .gmail-custom:hover {
-    padding: 5px;
-    width: 45px;
-    height: 35px;
-    border-radius: 5px;
+    -webkit-transform: scale(.8);
 }
 
 .github-custom {
@@ -114,10 +111,7 @@
 }
 
 .github-custom:hover {
-    padding: 5px;
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
+    -webkit-transform: scale(.8);
 }
 
 /* Message Styling */
@@ -230,6 +224,11 @@
     font-style: italic;
     color: rgb(112, 112, 112);
     line-height: 2px;
+}
+
+/* Styling the footer content */
+.custom-ft {
+    display: inline-flex;
 }
 
 /* Styling the scroll bar */
