@@ -53,9 +53,9 @@
 .custom-container-bg2 {
     padding: 5px;
     border: 3px;
-    max-height: 71vh;
+    max-height: 65vh;
     max-width: 60vw;
-    min-height: 70vh;
+    min-height: 60vh;
     min-width: 57vw;
     border-radius: 15px;
     border-style: solid;
@@ -266,9 +266,9 @@
     }
 
     .custom-container-bg2 {
-        max-height: 63vh;
+        max-height: 57vh;
         max-width: 60vw;
-        min-height: 62vh;
+        min-height: 52vh;
         min-width: 57vw;
     }
 }
@@ -283,9 +283,9 @@
     }
 
     .custom-container-bg2 {
-        max-height: 65vh;
+        max-height: 59vh;
         max-width: 60vw;
-        min-height: 64vh;
+        min-height: 54vh;
         min-width: 57vw;
     }
 }
@@ -300,9 +300,9 @@
     }
 
     .custom-container-bg2 {
-        max-height: 67vh;
+        max-height: 61vh;
         max-width: 60vw;
-        min-height: 66vh;
+        min-height: 56vh;
         min-width: 57vw;
     }
 }
@@ -317,9 +317,9 @@
     }
 
     .custom-container-bg2 {
-        max-height: 69vh;
+        max-height: 63vh;
         max-width: 60vw;
-        min-height: 68vh;
+        min-height: 58vh;
         min-width: 57vw;
     }
 } 
@@ -334,9 +334,9 @@
     }
 
     .custom-container-bg2 {
-        max-height: 71vh;
+        max-height: 65vh;
         max-width: 60vw;
-        min-height: 70vh;
+        min-height: 60vh;
         min-width: 57vw;
     }
 }
