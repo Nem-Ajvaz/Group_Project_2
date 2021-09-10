@@ -13,6 +13,6 @@ router.use('/auth', authRouter);
 router.use('/createUser', createUserRouter);
 router.use('/existingChatRoom', chatRoomListRouter);
 router.use('/createChatRoom',createChatRoomRouter);
-// router.use('/', userRouter);
+
 
 module.exports = router;
