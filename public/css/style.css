@@ -56,7 +56,6 @@
     max-height: 65vh;
     max-width: 60vw;
     min-height: 60vh;
-    min-width: 57vw;
     border-radius: 15px;
     border-style: solid;
     border-color: var(--bd5);
@@ -269,7 +268,6 @@
         max-height: 57vh;
         max-width: 60vw;
         min-height: 52vh;
-        min-width: 57vw;
     }
 }
 
@@ -286,7 +284,6 @@
         max-height: 59vh;
         max-width: 60vw;
         min-height: 54vh;
-        min-width: 57vw;
     }
 }
 
@@ -303,7 +300,6 @@
         max-height: 61vh;
         max-width: 60vw;
         min-height: 56vh;
-        min-width: 57vw;
     }
 }
 
@@ -320,7 +316,6 @@
         max-height: 63vh;
         max-width: 60vw;
         min-height: 58vh;
-        min-width: 57vw;
     }
 } 
 
@@ -337,7 +332,6 @@
         max-height: 65vh;
         max-width: 60vw;
         min-height: 60vh;
-        min-width: 57vw;
     }
 }
 
