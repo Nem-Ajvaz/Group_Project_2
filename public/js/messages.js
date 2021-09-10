@@ -85,7 +85,7 @@ $('#go-previous').click(function() {
 $(document).ready(async () => {
   const response = await fetch('/api/messages');
   const messageHistory = await response.json();
-  console.log(messageHistory);
+  //console.log(messageHistory);
   if (!messageHistory) {
     return;
   } else {
@@ -118,5 +118,5 @@ $(document).ready(async () => {
   }
 
   console.log(messageHistory.length);
-  console.log(messageHistory);
+  // console.log(messageHistory);
 });
