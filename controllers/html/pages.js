@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models/User');
 const { Chat } = require('../../models/Chat');
 const { Message } = require('../../models/Message');
+const { withAuth } = require('../../utils/withAuth');
 
 router.get('/', (req, res) => {
   res.render('homepage');
@@ -15,11 +16,11 @@ router.get('/signin', (req, res) => {
   res.render('signin');
 });
 
-router.get('/welcome', async (req, res) => {
+router.get('/welcome', withAuth, async (req, res) => {
   const data = await User.findAll({
     raw: true,
     where: {
-      id: 1
+      id: req.session.user_id
     },
     include: [
       {
@@ -47,12 +48,10 @@ router.get('/welcome', async (req, res) => {
   res.render('welcome', options);
 });
 
-router.get('/chat/:id', async (req, res) => {
+router.get('/chat/:id', withAuth, async (req, res) => {
   if (!req.params.id) {
     res.redirect('/welcome');
   }
-
-  console.log(req.params.id);
 
   const allMessages = await Message.findAll({
     raw: true,
@@ -61,7 +60,6 @@ router.get('/chat/:id', async (req, res) => {
     }
   });
 
-  console.log('allMessages', allMessages);
   res.render('chat', { allMessages });
 });
 
