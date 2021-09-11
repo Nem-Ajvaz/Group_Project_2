@@ -171,7 +171,7 @@
 }
 
 /* Button Styling */
-.chats {
+.chats, ul, li {
   background-color: var(--bg2);
   padding: 10px;
   border: 2px;
