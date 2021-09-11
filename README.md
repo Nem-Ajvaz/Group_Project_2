@@ -28,18 +28,31 @@ As a business owner.I would like an secure independent communication application
 ## Acceptance Criteria
 
 WHEN I am presented with the home page <br />
+
 THEN I am presented with a heading and logo, options to sign in and sign up as well as a means to contact the developers in the footer by GitHub or Email<br />
+
 WHEN I select sign up <br />
+
 THEN I am taken to to the sign in form and asked to enter a display name, email address and password <br />
+
 WHEN I enter an email address that has already been used <br />
+
 THEN I am prompted with an alert informing me that the email address has already been used <br />
+
 WHEN I select to sign in <br />
+
 THEN I am navigated to the sign in form which will ask for my username and password. <br />
+
 WHEN I enter the correct username and password combination<br />
+
 THEN I am taken to my chatroom list, where I can create new chatrooms  <br />
+
 WHEN I click on one room <br />
+
 THEN I am taken to the messaging interface with past messages <br />
+
 WHEN I use the web app on my tablet <br />
+
 THEN I get a responsive message interface <br />  
 
 ## Design
