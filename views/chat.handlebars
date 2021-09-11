@@ -12,12 +12,8 @@
         <div class="row justify-content-center">
             <header class="name-bg mx-auto text-center">{{{user.guest}}}</header>
             <div class="col-sm-11 col-custom">
-                {{#each user as |guest|}}
-                    {{> guest-message}}
-                {{/each}}
-
-                {{#each user as |owner|}}
-                    {{> owner-message}}
+                {{#each allMessages}}
+                    {{message_content}}
                 {{/each}}
             </div>
         </div>

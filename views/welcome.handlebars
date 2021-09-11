@@ -29,8 +29,9 @@
                     <div class="container custom-container-bg2 mb-5">
                         <div class="row justify-content-center">
                             <div class="col-sm-11 col-custom2" id= 'chatList'>
-
-
+                                {{#each userChats}}
+                                    <a href="/chat/{{id}}">{{chat_name}}</a>
+                                {{/each}}
                             </div>
                         </div>
                     </div>

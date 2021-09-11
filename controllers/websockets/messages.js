@@ -1,4 +1,7 @@
 const { Message } = require('../../models/Message');
+const { Chat } = require('../../models/Chat');
+
+let messagesInit = false;
 
 function initMessagesSocket(socket, io) {
   socket.on('newMessage', async msg => {
