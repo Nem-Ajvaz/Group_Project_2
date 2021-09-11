@@ -1,4 +1,6 @@
+
 const socket = io('http://localhost:4001');
+
 
 const getId = async obj => {
   const chatroomName = obj.id;
@@ -12,8 +14,9 @@ const getId = async obj => {
   });
   const response = await sendToChatRoom.json();
   if (response) {
-    console.log(response);
+    console.log(response); 
     document.location.replace(`/chat/${response}`);
     console.log(response);
   }
+  socket.emit('room', { room: response }); 
 };
