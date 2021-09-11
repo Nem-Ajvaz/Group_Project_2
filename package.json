@@ -1,10 +1,11 @@
 {
-  "name": "Chirper",
+  "name": "chirper",
   "version": "1.0.0",
   "description": "Chatting App",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"        
+    "start": "node server.js",
+    "dev": "nodemon server.js"    
   },
   "keywords": [],
   "author": "Nem Ajvaz,Ronin,Tanvir Hossain",
