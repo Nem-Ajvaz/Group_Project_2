@@ -1,11 +1,10 @@
 {
-  "name": "Tolks",
+  "name": "Chirper",
   "version": "1.0.0",
   "description": "Chatting App",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"    
+    "start": "node server.js"        
   },
   "keywords": [],
   "author": "Nem Ajvaz,Ronin,Tanvir Hossain",
