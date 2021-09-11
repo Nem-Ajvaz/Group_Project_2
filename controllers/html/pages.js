@@ -29,7 +29,7 @@ router.get('/welcome', withAuth, async (req, res) => {
       }
     ]
   });
-  console.log(data);
+  // console.log(data);
   const userChats = data.map(chat => {
     Object.keys(chat).map(key => {
       if (key.includes('.')) {

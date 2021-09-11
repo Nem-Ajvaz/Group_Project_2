@@ -8,24 +8,28 @@ router.post('/welcome', async (req, res) => {
     let userChatInput = req.body.inputText;
     // console.log(userChatInput);
     const renderChatRooms = await Chat.findAll({
+      raw: true,
       where: { chat_name: userChatInput }
     });
 
-    console.log(renderChatRooms);
+    //Room exists - create association only
     if (renderChatRooms.length > 0) {
+      console.log(renderChatRooms.id);
+      console.log(typeof renderChatRooms);
       const createAssociations = UserChat.create({
-        UserId: 1,
-        ChatId: 4,
+        UserId: req.session.user_id,
+        ChatId: renderChatRooms[0].id,
         is_owner: 0
       });
     } else {
+      //Room doesn't exist - create association and make owner
       const createRoom = Chat.create({
         chat_name: userChatInput
       }).then(response => {
         const createAssociations = UserChat.create({
-          UserId: 1,
+          UserId: req.session.user_id,
           ChatId: response.id,
-          is_owner: 0
+          is_owner: 1
         });
       });
     }
