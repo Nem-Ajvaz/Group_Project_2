@@ -1,4 +1,8 @@
-{{!-- {{#if logged_In}}  --}}
+{{!-- {{#if logged_In}}
+     --}}
+     {{!-- <script>
+         console.log(JSON.stringify({{session.username}}))
+     </script> --}}
     <nav class="navbar navbar-light">   
         <img alt="Chirper" src="/assets/images/Chirper.png" class="custom-img"> 
         <div>
@@ -11,7 +15,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-8">
                     <div class="welcome">
-                        <h2  id="welcome">Welcome {{{username}}}</h2>
+                        <h2  id="welcome">Welcome {{session.username}}</h2>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-sm-8 mb-5 custom-field2">
@@ -30,7 +34,7 @@
                         <div class="row justify-content-center">
                             <div class="col-sm-11 col-custom2" id= 'chatList'>
                                 {{#each userChats}}
-                                    <a href="/chat/{{id}}">{{chat_name}}</a>
+                                    <a href="/chat/{{id}}" class='btn chats btn-lg btn-block'>{{chat_name}}</a>
                                 {{/each}}
                             </div>
                         </div>
@@ -57,4 +61,4 @@
                 <button type="submit" id="signin-initial" class="btn custom-btn font-weight-bold px-md-5">Sign In</button>
             </div>
         </div>
-{{!-- {{/if }}  --}}
+{{/if }}  --}}

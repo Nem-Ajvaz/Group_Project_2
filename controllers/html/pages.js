@@ -19,7 +19,7 @@ router.get('/welcome', async (req, res) => {
   const data = await User.findAll({
     raw: true,
     where: {
-      id: '1'
+      id: 1
     },
     include: [
       {
@@ -41,7 +41,10 @@ router.get('/welcome', async (req, res) => {
     });
     return chat;
   });
-  res.render('welcome', { userChats });
+
+  const options = { userChats: userChats, session: req.session };
+  console.log(userChats);
+  res.render('welcome', options);
 });
 
 router.get('/chat/:id', async (req, res) => {
@@ -52,10 +55,10 @@ router.get('/chat/:id', async (req, res) => {
   console.log(req.params.id);
 
   const allMessages = await Message.findAll({
+    raw: true,
     where: {
       chat_id: req.params.id
-    },
-    raw: true
+    }
   });
 
   console.log('allMessages', allMessages);

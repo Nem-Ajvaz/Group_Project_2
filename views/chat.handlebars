@@ -13,7 +13,9 @@
             <header class="name-bg mx-auto text-center">{{{user.guest}}}</header>
             <div class="col-sm-11 col-custom">
                 {{#each allMessages}}
-                    {{message_content}}
+                    <p class='owner-message'>{{message_content}}</p>
+                    <p class='owner-timestap'>{{created_at}}</p>
+                    {{!-- {{created_at}} --}}
                 {{/each}}
             </div>
         </div>
