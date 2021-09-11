@@ -12,34 +12,28 @@
     </nav>
 
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-sm-8">
-                    <div class="welcome">
-                        <h2  id="welcome">Welcome {{session.username}}</h2>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-sm-8 mb-5 custom-field2">
-                            <form class="chat-form" id="create-chat">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="submit" id="createRoom">Create Room</button>
-                                    </div>
+            <div class="col-sm-8">
+                <div class="welcome">
+                    <h2  id="welcome">Welcome {{session.username}}</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-8 mb-5 custom-field2">
+                        <form class="chat-form" id="create-chat">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="message-input" placeholder="... type you message here" aria-label="... type you message here" aria-describedby="send" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit" id="createRoom">Create Room</button>
                                 </div>
-                            </form>      
-                        </div>
-                    </div>
-                        
-                    <div class="container custom-container-bg2 mb-5">
-                        <div class="row justify-content-center">
-                            <div class="col-sm-11 col-custom2" id= 'chatList'>
-                                {{#each userChats}}
-                                    <a href="/chat/{{id}}" class='btn chats btn-lg btn-block'>{{chat_name}}</a>
-                                {{/each}}
                             </div>
-                        </div>
+                        </form>      
                     </div>
                 </div>
+                    
+                <ul>
+                {{#each userChats}}
+                    <li><a href="/chat/{{id}}" >{{chat_name}}</a></li>
+                {{/each}}
+                </ul>
             </div>
         </div>
 

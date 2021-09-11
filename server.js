@@ -21,12 +21,11 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
-
   cookie: {
     maxAge: 600000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
     secure: false,
-    sameSite: 'strict' 
+    sameSite: 'strict'
   },
   rolling: true,
   resave: true,
@@ -41,12 +40,6 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-//To test session and session IDS
-app.get('/session', (req, res) => {
-  console.log(req.session);
-  res.send('hello mate');
-});
 
 app.use(cors());
 app.use(routes);
