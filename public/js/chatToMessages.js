@@ -1,3 +1,5 @@
+
+
 const getId = async obj => {
   const chatroomName = obj.id;
   console.log(chatroomName);
@@ -10,8 +12,9 @@ const getId = async obj => {
   });
   const response = await sendToChatRoom.json();
   if (response) {
-    console.log(response);
+    console.log(response); 
     document.location.replace(`/chat/${response}`);
     console.log(response);
   }
+  socket.emit('room', { room: response }); 
 };
