@@ -21,6 +21,7 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'Super secret secret',
+
   cookie: {
     maxAge: 600000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
@@ -53,7 +54,7 @@ app.use(routes);
 (async () => {
   await sequelize.sync({ force: false });
   app.listen(SERVER_PORT, () => {
-    console.log('Now listening Sequelize Live!!!');
+    console.log(`Sequelize Listening on port ${SERVER_PORT}!!!`);
     initSocketServer(server);
   });
 })();
