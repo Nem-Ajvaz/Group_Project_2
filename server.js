@@ -48,7 +48,7 @@ app.use(routes);
 (async () => {
   await sequelize.sync({ force: false });
   app.listen(SERVER_PORT, () => {
-    console.log('Now listening Sequelize Live!!!');
+    console.log(`Sequelize Listening on port ${SERVER_PORT}!!!`);
     initSocketServer(server);
   });
 })();
