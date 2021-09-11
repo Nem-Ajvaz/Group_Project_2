@@ -21,7 +21,7 @@ const loginFormHandler = async event => {
     });
 
     if (response.ok) {
-      document.location.replace('/welcome');
+      window.location.replace('/welcome');
     } else {
       $attachAlert.empty();
       const signinUser = $('<div>');
