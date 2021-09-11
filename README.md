@@ -23,7 +23,7 @@ This project will enable the users to securely log in to the web application and
 
 ## User Story
 
-As a private practice owner I would like an independent communication application. So that I can continually communicate with my clients face to face during lockdown or in remote locations.
+As a business owner.I would like an secure independent communication application.So that I can communicate with my clients, follow up on potential leads, and prospects. As well as maintain the privacy of my clients and communicate with them in real time.
 
 ## Acceptance Criteria
 
@@ -36,8 +36,10 @@ THEN I am prompted with an alert informing me that the email address has already
 WHEN I select to sign in <br />
 THEN I am navigated to the sign in form which will ask for my username and password. <br />
 WHEN I enter the correct username and password combination<br />
-THEN I am taken to my message history  <br />
-WHEN I am in a message room with someone <br />
+THEN I am taken to my chatroom list, where I can create new chatrooms  <br />
+WHEN I click on one room <br />
+THEN I am taken to the messaging interface with past messages <br />
+WHEN I use the web app on my tablet <br />
 THEN I get a responsive message interface <br />  
 
 ## Design
