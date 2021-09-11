@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //To test session and session IDS
 app.get('/session', (req, res) => {
-  console.log(req.session.id);
+  console.log(req.session);
   res.send('hello mate');
 });
 

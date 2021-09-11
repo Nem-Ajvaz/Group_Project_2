@@ -15,19 +15,22 @@ socket.on('connect', () => {
   console.log(`A new user has joined the chat with socket id ${socket.id}`);
   let user = socket.id;
 
-  socket.emit('addUser', user);
+  socket.emit('addUser', user); // only to room
 
   $formElem.on('submit', e => {
     e.preventDefault();
 
     const messageValue = $messageInput.val().trim();
 
+    let roomId = window.location.pathname.substring(
+      window.location.pathname.lastIndexOf('/') + 1
+    );
+    let chatId = parseInt(roomId);
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
-      chat_id: '1',
-      sender_id: '1'
-      // message_created: moment().format('h:mm a')
+      chat_id: chatId,
+      sender_id: 1
     });
 
     // if its an empty string, end here.
