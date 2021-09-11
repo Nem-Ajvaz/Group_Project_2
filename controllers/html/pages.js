@@ -29,6 +29,7 @@ router.get('/welcome', withAuth, async (req, res) => {
       }
     ]
   });
+  console.log(data);
   const userChats = data.map(chat => {
     Object.keys(chat).map(key => {
       if (key.includes('.')) {
@@ -42,9 +43,8 @@ router.get('/welcome', withAuth, async (req, res) => {
     });
     return chat;
   });
-
-  const options = { userChats: userChats, session: req.session };
-  console.log(userChats);
+  //console.log(userChats);
+  const options = { userChats, session: req.session };
   res.render('welcome', options);
 });
 
