@@ -26,7 +26,7 @@ const sess = {
   cookie: {
     maxAge: 600000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
-    secure: false,
+    secure: true,
     sameSite: 'strict'
   },
   rolling: true,
