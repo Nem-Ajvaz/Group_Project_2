@@ -17,33 +17,28 @@ router.get('/signin', (req, res) => {
 });
 
 router.get('/welcome', withAuth, async (req, res) => {
-  const data = await User.findAll({
+  const data = await Chat.findAll({
     raw: true,
-    where: {
-      id: req.session.user_id
-    },
+    attributes: ['chat_name'],
     include: [
       {
-        model: Chat,
-        attributes: ['chat_name']
+        model: User,
+        where: {
+          id: req.session.user_id
+        }
       }
     ]
   });
-  // console.log(data);
+
+  console.log('daata', data);
   const userChats = data.map(chat => {
     Object.keys(chat).map(key => {
-      if (key.includes('.')) {
-        const index = key.lastIndexOf('.');
-        if (index !== -1) {
-          const newKey = key.substr(index + 1);
-          chat[newKey] = chat[key];
-        }
-      }
-      return chat;
+      const newKey = key.replace(/\./g, '_');
+      chat[newKey] = chat[key];
     });
     return chat;
   });
-  //console.log(userChats);
+  console.log('userChats', userChats);
   const options = { userChats, session: req.session };
   res.render('welcome', options);
 });

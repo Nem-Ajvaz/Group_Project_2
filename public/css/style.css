@@ -101,9 +101,7 @@
 }
 
 .gmail-custom:hover {
-
-    -webkit-transform: scale(.8);
-
+  -webkit-transform: scale(0.8);
 }
 
 .github-custom {
@@ -113,9 +111,7 @@
 }
 
 .github-custom:hover {
-
-    -webkit-transform: scale(.8);
-
+  -webkit-transform: scale(0.8);
 }
 
 /* Message Styling */
@@ -196,6 +192,10 @@
 }
 
 /* Styling the Input */
+ul {
+  list-style-type: none;
+}
+
 .custom-field {
   position: fixed;
   bottom: 0;
@@ -232,7 +232,7 @@
 
 /* Styling the footer content */
 .custom-ft {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 /* Styling the scroll bar */
