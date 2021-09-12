@@ -1,4 +1,4 @@
-const socket = io('http://localhost:4001');
+const socket = io('http://localhost:3001');
 const $formElem = $('form');
 const $chatNameHeading = $('#chat-name-heading');
 

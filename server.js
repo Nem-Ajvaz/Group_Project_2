@@ -15,7 +15,7 @@ const { initSocketServer } = require('./socketServer.js');
 const app = express();
 
 
-const SERVER_PORT = process.env.PORT || 3001;
+// const SERVER_PORT = process.env.PORT || 3001;
 
 const server = http.createServer(app); // Extra port
 
@@ -49,10 +49,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(routes);
 
-(async () => {
-  await sequelize.sync({ force: false });
-  app.listen(SERVER_PORT, () => {
-    console.log(`Sequelize Listening on port ${SERVER_PORT}!!!`);
-    initSocketServer(server);
-  });
-})();
+
+sequelize.sync({ force: false })
+.then(()=>{
+  initSocketServer(server); 
+});
