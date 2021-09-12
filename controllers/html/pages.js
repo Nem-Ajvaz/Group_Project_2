@@ -19,7 +19,6 @@ router.get('/signin', (req, res) => {
 router.get('/welcome', withAuth, async (req, res) => {
   const data = await Chat.findAll({
     raw: true,
-    attributes: ['chat_name'],
     include: [
       {
         model: User,
@@ -39,6 +38,7 @@ router.get('/welcome', withAuth, async (req, res) => {
     return chat;
   });
   console.log('userChats', userChats);
+  console.log('session', req.session);
   const options = { userChats, session: req.session };
   res.render('welcome', options);
 });
