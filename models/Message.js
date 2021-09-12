@@ -20,14 +20,14 @@ Message.init(
     chat_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'CHAT',
+        model: 'Chat',
         key: 'id'
       }
     },
     sender_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'USER',
+        model: 'User',
         key: 'id'
       }
     },
