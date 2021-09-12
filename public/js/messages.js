@@ -5,6 +5,11 @@ const $formElem = $('form');
 const $messageInput = $('#message-input');
 const $messageDetails = $('#messageDetails');
 
+let roomId = window.location.pathname.substring(
+  window.location.pathname.lastIndexOf('/') + 1
+);
+let chatId = parseInt(roomId);
+
 socket.on('connect', () => {
   function formatDate(date) {
     return moment(date).format('h:mm a');
@@ -22,10 +27,6 @@ socket.on('connect', () => {
 
     const messageValue = $messageInput.val().trim();
 
-    let roomId = window.location.pathname.substring(
-      window.location.pathname.lastIndexOf('/') + 1
-    );
-    let chatId = parseInt(roomId);
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
@@ -46,21 +47,24 @@ socket.on('connect', () => {
     $userMessage.text(messageValue);
     $messageDetails.append($userMessage);
     $messageDetails.append($userSendDetails);
+
+    $messageInput.val('');
   });
 
   //listenner for a message being sent
   socket.on('message', data => {
-    console.log(data.message_content);
-    const $messageReceived = $('<p>');
-    const $userReceiveDetails = $('<p>');
+    if (data.chat_id === chatId) {
+      const $messageReceived = $('<p>');
+      const $userReceiveDetails = $('<p>');
 
-    $userReceiveDetails.text('Received at 9:12');
-    $userReceiveDetails.addClass('guest-timestap');
-    $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
+      $userReceiveDetails.text('Received at 9:12');
+      $userReceiveDetails.addClass('guest-timestap');
+      $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
 
-    $messageReceived.text(data.message_content);
-    $messageDetails.append($messageReceived);
-    $messageDetails.append($userReceiveDetails);
+      $messageReceived.text(data.message_content);
+      $messageDetails.append($messageReceived);
+      $messageDetails.append($userReceiveDetails);
+    }
   });
 
   socket.on('userAdded', data => {
