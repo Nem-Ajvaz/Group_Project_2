@@ -89,6 +89,7 @@
   margin-bottom: 5%;
   margin-top: -10%;
   margin-left: 5%;
+  text-align: center;
 }
 
 /* Image Styling */
@@ -171,14 +172,16 @@
 
 /* Button Styling */
 .chats, li {
-  background-color: var(--bg2);
+  background-color: rgb(233, 170, 240);
   padding: 10px;
   border: 2px;
-  margin: 2px;
+  margin: 4px;
   border-style: solid;
-  border-color: rgba(11, 105, 53, 0.295);
-  border-radius: 15px;
+  border-color: rgba(0, 0, 0, 0.61);
+  border-radius: 8px;
   line-height: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
 .custom-btn {
@@ -245,7 +248,6 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg2);
   border-radius: 20px;
   margin-bottom: 5px;
   margin-top: 5px;
