@@ -1,5 +1,6 @@
 const socket = io('http://localhost:4001');
 const $formElem = $('form');
+const $chatNameHeading = $('#chat-name-heading');
 
 //Referencing elements from the HTML
 const $messageInput = $('#message-input');
@@ -10,11 +11,21 @@ let roomId = window.location.pathname.substring(
 );
 let chatId = parseInt(roomId);
 
-socket.on('connect', () => {
-  function formatDate(date) {
-    return moment(date).format('h:mm a');
-  }
+function formatDate(date) {
+  return moment(date).format('h:mm a');
+}
 
+const chatRoomName = await fetch('/api/chatName', {
+  method: 'POST',
+  body: JSON.stringify({ chatId }),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+const existingChatRooms = await chatRoomName.json();
+console.log(existingChatRooms);
+
+socket.on('connect', () => {
   const dataAsString = formatDate(Date.now());
 
   console.log(`A new user has joined the chat with socket id ${socket.id}`);
@@ -31,7 +42,6 @@ socket.on('connect', () => {
     socket.emit('newMessage', {
       message_content: messageValue,
       chat_id: chatId
-      // sender_id: //req
     });
 
     // if its an empty string, end here.
@@ -40,7 +50,7 @@ socket.on('connect', () => {
     const $userMessage = $('<p>');
     const $userSendDetails = $('<p>');
 
-    $userSendDetails.text('Received at ' + dataAsString);
+    $userSendDetails.text('Sent at ' + dataAsString);
     $userMessage.addClass('owner-message');
     $userSendDetails.addClass('owner-timestap'); //Class needs to be different between the message sent.
 
@@ -57,7 +67,7 @@ socket.on('connect', () => {
       const $messageReceived = $('<p>');
       const $userReceiveDetails = $('<p>');
 
-      $userReceiveDetails.text('Received at 9:12');
+      $userReceiveDetails.text('Received at ' + dataAsString);
       $userReceiveDetails.addClass('guest-timestap');
       $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
 
@@ -65,13 +75,6 @@ socket.on('connect', () => {
       $messageDetails.append($messageReceived);
       $messageDetails.append($userReceiveDetails);
     }
-  });
-
-  socket.on('userAdded', data => {
-    const newUser = $('<p>');
-    newUser.text(`New user: ${data} has joined the chat`);
-    newUser.addClass('user-joined');
-    $messageDetails.append(newUser);
   });
 
   socket.on('end', function() {
@@ -88,42 +91,3 @@ $('#go-previous').click(function() {
 });
 
 //messageDetails
-
-$(document).ready(async () => {
-  const response = await fetch('/api/messages');
-  const messageHistory = await response.json();
-  //console.log(messageHistory);
-  if (!messageHistory) {
-    return;
-  } else {
-    for (let i = 0; i < messageHistory.length; i++) {
-      if (messageHistory[i].sender_id === 1) {
-        //content
-        const $historyChat = $('<p>');
-        $historyChat.text(messageHistory[i].message_content);
-        $historyChat.addClass('owner-message');
-        $messageDetails.append($historyChat);
-        //timestamp
-        const $historyTimestamp = $('<p>');
-        $historyTimestamp.text(messageHistory[i].created_at.toString());
-        $historyTimestamp.addClass('owner-timestap');
-        $messageDetails.append($historyTimestamp);
-      } else {
-        //content
-        const $historyChat = $('<p>');
-        $historyChat.text(messageHistory[i].message_content);
-        $historyChat.addClass('guest-message');
-        $messageDetails.append($historyChat);
-
-        //timestamp
-        const $historyTimestamp = $('<p>');
-        $historyTimestamp.text(messageHistory[i].created_at.toString());
-        $historyTimestamp.addClass('guest-timestap');
-        $messageDetails.append($historyTimestamp);
-      }
-    }
-  }
-
-  console.log(messageHistory.length);
-  // console.log(messageHistory);
-});

@@ -8,20 +8,6 @@ function initChatSocket(socket, io) {
     console.log(userdata);
     socket.emit('userRemoved', userdata);
   });
-
-//   socket.on('connection', function(socket) {
-//     socket.on('join', function(room) {
-//     socket.join(room);
-//     console.log(`This ${room} is active`);
-// });
-// });
-
-//  socket.on('room', res => {
-//    console.log (res + 'newRoom');
-//  })
- 
-
-
 }
 
 module.exports = { initChatSocket };
