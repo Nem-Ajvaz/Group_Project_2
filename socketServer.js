@@ -6,8 +6,8 @@ const SOCKET_PORT = process.env.PORT || 3001;
 function initSocketServer(server) {
   const io = socket(server, {
     cors: {
-      // allowing all urls to access
-      origin: '*'
+      origin:'http://localhost:3001',
+      methods: ['GET', 'POST']
     }
   });
   io.on('connection', socket => {
