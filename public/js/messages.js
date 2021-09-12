@@ -1,4 +1,4 @@
-const socket = io('http://localhost:4001');
+const socket = io('http://localhost:3001');
 const $formElem = $('form');
 const $chatNameHeading = $('#chat-name-heading');
 
@@ -14,16 +14,6 @@ let chatId = parseInt(roomId);
 function formatDate(date) {
   return moment(date).format('h:mm a');
 }
-
-const chatRoomName = await fetch('/api/chatName', {
-  method: 'POST',
-  body: JSON.stringify({ chatId }),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-const existingChatRooms = await chatRoomName.json();
-console.log(existingChatRooms);
 
 socket.on('connect', () => {
   const dataAsString = formatDate(Date.now());
@@ -41,7 +31,8 @@ socket.on('connect', () => {
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
-      chat_id: chatId
+      chat_id: chatId,
+      sender_id: 2
     });
 
     // if its an empty string, end here.

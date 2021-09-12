@@ -48,6 +48,14 @@ router.get('/chat/:id', withAuth, async (req, res) => {
     res.redirect('/welcome');
   }
 
+  const chatName = await Chat.findAll({
+    raw: true,
+    where: { id: req.params.id }
+  });
+
+  console.log(chatName[0].chat_name);
+  const roomName = chatName[0].chat_name;
+
   const allMessages = await Message.findAll({
     raw: true,
     where: {
@@ -55,7 +63,8 @@ router.get('/chat/:id', withAuth, async (req, res) => {
     }
   });
 
-  res.render('chat', { allMessages });
+  console.log(allMessages);
+  res.render('chat', { allMessages, roomName });
 });
 
 router.get('*', (req, res) => {
