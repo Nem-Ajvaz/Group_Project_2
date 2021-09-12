@@ -13,11 +13,11 @@ const sequelize = require('./config/connection');
 const { initSocketServer } = require('./socketServer.js');
 
 const app = express();
-const app2 = express(); // Extra port
+
 
 const SERVER_PORT = process.env.PORT || 3001;
 
-const server = http.createServer(app2); // Extra port
+const server = http.createServer(app); // Extra port
 
 const hbs = exphbs.create({ helpers });
 
