@@ -1,7 +1,7 @@
 const socket = require('socket.io');
 const { initAllSockets } = require('./controllers/websockets');
 
-const SOCKET_PORT = process.env.PORT || 3001;
+const SOCKET_PORT = process.env.PORT || 4001;
 
 function initSocketServer(server) {
   const io = socket(server, {
