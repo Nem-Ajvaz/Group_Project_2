@@ -1,4 +1,5 @@
-const socket = io('http://localhost:3001');
+const ip = '127.0.0.1:3001';
+const socket = io(ip);
 
 const getId = async obj => {
   const chatroomName = obj.id;

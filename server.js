@@ -14,9 +14,6 @@ const { initSocketServer } = require('./socketServer.js');
 
 const app = express();
 
-
-// const SERVER_PORT = process.env.PORT || 3001;
-
 const server = http.createServer(app); // Extra port
 
 const hbs = exphbs.create({ helpers });
@@ -49,8 +46,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(routes);
 
-
 sequelize.sync({ force: false })
+
 .then(()=>{
   initSocketServer(server); 
 });

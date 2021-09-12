@@ -7,7 +7,7 @@ function initSocketServer(server) {
   const io = socket(server, {
     cors: {
       origin:'http://localhost:3001',
-      methods: ['GET', 'POST']
+      methods: ["GET", "POST"]
     }
   });
   io.on('connection', socket => {
