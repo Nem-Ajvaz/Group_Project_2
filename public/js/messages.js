@@ -15,15 +15,15 @@ function formatDate(date) {
   return moment(date).format('h:mm a');
 }
 
-const chatRoomName = await fetch('/api/chatName', {
-  method: 'POST',
-  body: JSON.stringify({ chatId }),
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-const existingChatRooms = await chatRoomName.json();
-console.log(existingChatRooms);
+// const chatRoomName = await fetch('/api/chatName', {
+//   method: 'POST',
+//   body: JSON.stringify({ chatId }),
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// });
+// const existingChatRooms = await chatRoomName.json();
+// console.log(existingChatRooms);
 
 socket.on('connect', () => {
   const dataAsString = formatDate(Date.now());
