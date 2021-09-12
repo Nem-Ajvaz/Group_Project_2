@@ -1,10 +1,11 @@
 const { Message } = require('../../models/Message');
-const { Chat } = require('../../models/Chat');
+
 
 let messagesInit = false;
 
 function initMessagesSocket(socket, io) {
   socket.on('newMessage', async msg => {
+    socket.broadcast.emit('message', msg );
     try {
       const createMessage = await Message.create(msg);
       socket.broadcast.emit('message', createMessage.get({ plain: true })); // Needs to be a broadcast so the user doesnt see their message twice.
