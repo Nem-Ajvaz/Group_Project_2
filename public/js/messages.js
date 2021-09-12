@@ -29,8 +29,8 @@ socket.on('connect', () => {
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
-      chat_id: chatId,
-      sender_id: 1
+      chat_id: chatId
+      // sender_id: //req
     });
 
     // if its an empty string, end here.

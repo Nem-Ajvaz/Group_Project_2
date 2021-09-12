@@ -14,8 +14,6 @@ router.post('/welcome', async (req, res) => {
 
     //Room exists - create association only
     if (renderChatRooms.length > 0) {
-      console.log(renderChatRooms.id);
-      console.log(typeof renderChatRooms);
       const createAssociations = UserChat.create({
         UserId: req.session.user_id,
         ChatId: renderChatRooms[0].id,

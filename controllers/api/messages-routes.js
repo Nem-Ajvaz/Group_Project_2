@@ -33,10 +33,3 @@ router.get('/messages', async (req, res) => {
 });
 
 module.exports = router;
-
-// {
-//   "message_id": "9",
-//   "message_content": "We got a lot of work done today Woooo Hoooo :(",
-//   "chat_id": "1",
-//   "sender_id": "1"
-// }
