@@ -1,3 +1,4 @@
+
 const socket = io('http://localhost:3001');
 const $formElem = $('form');
 const $chatNameHeading = $('#chat-name-heading');
@@ -14,6 +15,7 @@ let chatId = parseInt(roomId);
 function formatDate(date) {
   return moment(date).format('h:mm a');
 }
+
 
 socket.on('connect', () => {
   const dataAsString = formatDate(Date.now());

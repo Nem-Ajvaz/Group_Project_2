@@ -6,5 +6,5 @@ DROP DATABASE IF EXISTS chirper_db;
 CREATE DATABASE chirper_db;
 
 -- USE THE DATABASE
-USE DATABASE  chirper_db;
+USE  chirper_db;
 

@@ -13,9 +13,8 @@ const sequelize = require('./config/connection');
 const { initSocketServer } = require('./socketServer.js');
 
 const app = express();
-// const SERVER_PORT = process.env.PORT || 3001;
 
-const server = http.createServer(app);
+const server = http.createServer(app); // Extra port
 
 const hbs = exphbs.create({ helpers });
 
@@ -25,7 +24,7 @@ app.set('view engine', 'handlebars');
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 600000, // 10 minutes in milliseconds is 600000
+    maxAge: 36000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
     secure: false,
     sameSite: 'strict'
@@ -47,14 +46,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(routes);
 
-// (async () => {
-//   await sequelize.sync({ force: false });
-//   app.listen(SERVER_PORT, () => {
-//     console.log(`Sequelize Listening on port ${SERVER_PORT}!!!`);
-//     initSocketServer(server);
-//   });
-// })();
 
-sequelize.sync({ force: false }).then(() => {
-  initSocketServer(server);
+sequelize.sync({ force: false })
+
+.then(()=>{
+  initSocketServer(server); 
 });
+
