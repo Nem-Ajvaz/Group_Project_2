@@ -5,7 +5,6 @@ const { Message, Chat } = require('../../models');
 //Change name at a later date
 router.post('/chatMessage', async (req, res) => {
   try {
-    console.log(req.body);
     const findMessageChatId = await Chat.findAll({
       raw: true,
       where: { chat_name: req.body.chatroomName }
@@ -24,8 +23,20 @@ router.get('/messages', async (req, res) => {
   try {
     const findAllMessages = await Message.findAll({});
 
-    //console.log(findAllMessages);
     res.status(200).json(findAllMessages);
+  } catch (e) {
+    console.log(e);
+    res.status(500).json({ message: 'SOMETHING WENT WRONG' });
+  }
+});
+
+router.get('chatName', async (req, res) => {
+  try {
+    console.log('this has been hit');
+    const chatName = await Chat.findByPk({
+      where: { chat_id: req.body.chatId }
+    });
+    res.status(200).json(chatName);
   } catch (e) {
     console.log(e);
     res.status(500).json({ message: 'SOMETHING WENT WRONG' });

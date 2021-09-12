@@ -13,10 +13,6 @@ const loginFormHandler = async event => {
     .val()
     .trim();
 
-  // console.log(username);
-  // console.log(password);
-  // console.log(email);
-
   if (username && password && email) {
     const response = await fetch('/api/createUser/signup', {
       method: 'POST',

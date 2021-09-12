@@ -38,17 +38,3 @@ $('#cancel').click(function() {
 });
 
 $signinForm.on('submit', loginFormHandler);
-
-// $('#signupFormInput').on('submit', loginFormHandler);
-
-// $signInEle.on('submit', loginFormHandler);
-
-// $signinForm.on('submit', e => {
-//   e.preventDefault();
-
-//   const $username = $('#InputUsername-signin').val();
-//   const $password = $('#InputPassword-signin').val();
-
-//   console.log($username);
-//   console.log($password);
-// });

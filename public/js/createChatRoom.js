@@ -3,7 +3,7 @@ const $messageInputEle = $('#message-input');
 
 $createRoom.on('submit', async e => {
   e.preventDefault();
-  // console.log('hi guys');
+
   const inputText = $messageInputEle
     .val()
     .toLowerCase()

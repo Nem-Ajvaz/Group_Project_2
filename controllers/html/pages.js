@@ -29,7 +29,6 @@ router.get('/welcome', withAuth, async (req, res) => {
     ]
   });
 
-  console.log('daata', data);
   const userChats = data.map(chat => {
     Object.keys(chat).map(key => {
       const newKey = key.replace(/\./g, '_');
@@ -37,9 +36,10 @@ router.get('/welcome', withAuth, async (req, res) => {
     });
     return chat;
   });
-  console.log('userChats', userChats);
-  console.log('session', req.session);
-  const options = { userChats, session: req.session };
+  const options = {
+    userChats,
+    session: req.session
+  };
   res.render('welcome', options);
 });
 
