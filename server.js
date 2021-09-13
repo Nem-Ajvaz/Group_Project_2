@@ -26,12 +26,11 @@ const sess = {
   cookie: {
     maxAge: 36000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
-    secure: false,
-    sameSite: 'strict'
+    secure: false,    
   },
   rolling: true,
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
   store: new SequelizeStore({
     db: sequelize
   })
