@@ -9,7 +9,6 @@
 - [Description](#description)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
-- [Design](#design) 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Test Instructions](#test-instructions)
@@ -23,7 +22,8 @@ This project will enable the users to securely log in to the web application and
 
 ## User Story
 
-As a business owner.I would like an secure independent communication application.So that I can communicate with my clients, follow up on potential leads, and prospects. As well as maintain the privacy of my clients and communicate with them in real time.
+As a user I would like a messaging platform that allows me to create and join chat rooms
+So that I can chirp with others on topics that I have an interest in
 
 ## Acceptance Criteria
 
@@ -54,32 +54,6 @@ THEN I am taken to the messaging interface with past messages <br />
 WHEN I use the web app on my tablet <br />
 
 THEN I get a responsive message interface <br />  
-
-## Wireframe
-
-### When a user loads the webpage they will be greeted by a page with Sign in/Sign Up options. <br />
-
-![Login Page](assets/img/wireframe1.png)
-<br/>
-![Login Page](assets/img/wireframe2.png)
-<br/>
-![Login Page](assets/img/wireframe3.png)
-
-<br/>
-
-### When a user log in they will be on the welcome screen with chat history
-
-<br/>
-
-![Welcome Page](assets/img/wireframe4.png)
-
-### When a user click on specific chat history they will be taken to the chat room
-
-<br/>
-
-![Chat Room](assets/img/wireframe5.png)
-
-<br/>  
 
 ## Installation  
 
