@@ -10,8 +10,6 @@ router.post('/chatMessage', async (req, res) => {
       where: { chat_name: req.body.chatroomName }
     });
 
-    console.log(findMessageChatId[0].id);
-
     res.status(200).json(findMessageChatId[0].id);
   } catch (e) {
     console.log(e);

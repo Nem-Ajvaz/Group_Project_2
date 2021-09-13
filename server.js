@@ -46,9 +46,7 @@ app.use(cors());
 app.use(routes);
 
 
-sequelize.sync({ force: false })
-
-.then(()=>{
-  initSocketServer(server); 
+sequelize.sync({ force: false }).then(() => {
+  initSocketServer(server);
 });
 

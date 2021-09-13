@@ -16,6 +16,7 @@ router.get('/signin', (req, res) => {
   res.render('signin');
 });
 
+//Find aall chats with the user_id
 router.get('/welcome', withAuth, async (req, res) => {
   const data = await Chat.findAll({
     raw: true,
@@ -29,7 +30,9 @@ router.get('/welcome', withAuth, async (req, res) => {
     ]
   });
 
+  // console.log(data[0]);
   const userChats = data.map(chat => {
+    // console.log(chat);
     Object.keys(chat).map(key => {
       const newKey = key.replace(/\./g, '_');
       chat[newKey] = chat[key];
@@ -53,7 +56,6 @@ router.get('/chat/:id', withAuth, async (req, res) => {
     where: { id: req.params.id }
   });
 
-  console.log(chatName[0].chat_name);
   const roomName = chatName[0].chat_name;
 
   const allMessages = await Message.findAll({
@@ -63,7 +65,6 @@ router.get('/chat/:id', withAuth, async (req, res) => {
     }
   });
 
-  console.log(allMessages);
   res.render('chat', { allMessages, roomName });
 });
 

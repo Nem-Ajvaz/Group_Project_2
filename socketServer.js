@@ -6,7 +6,9 @@ const SOCKET_PORT = process.env.PORT || 3001;
 const options = { cors: { origin:"*"}};
 
 function initSocketServer(server) {
-  const io = socket(server, options);
+
+const io = socket(server, options);
+
   io.on('connection', socket => {
     initAllSockets(socket, io);
   });
