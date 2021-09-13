@@ -104,18 +104,10 @@
   height: 40px;
 }
 
-.gmail-custom:hover {
-  -webkit-transform: scale(0.8);
-}
-
 .github-custom {
   padding: 5px;
   width: 40px;
   height: 40px;
-}
-
-.github-custom:hover {
-  -webkit-transform: scale(0.8);
 }
 
 /* Message Styling */
@@ -171,7 +163,8 @@
 }
 
 /* Button Styling */
-.chats, li {
+.chats,
+li {
   background-color: rgb(233, 170, 240);
   padding: 10px;
   border: 2px;

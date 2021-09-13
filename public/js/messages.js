@@ -1,3 +1,5 @@
+const { mapFinderOptions } = require('sequelize/types/lib/utils');
+
 const socket = io('http://localhost:3001');
 const $formElem = $('form');
 const $chatNameHeading = $('#chat-name-heading');
@@ -27,6 +29,8 @@ socket.on('connect', () => {
     e.preventDefault();
 
     const messageValue = $messageInput.val().trim();
+
+    console.log(messageValue === true);
 
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
