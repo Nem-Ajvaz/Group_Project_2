@@ -147,6 +147,36 @@
   clear: both;
 }
 
+.guest-message2 {
+  background-color: var(--bg2);
+  padding: 8px;
+  width: auto;
+  height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd5);
+  border-radius: 15px;
+  display: block;
+  float: left;
+  clear: both;
+  margin-left: 5vw;
+}
+
+.owner-message2 {
+  background-color: var(--bg1);
+  padding: 5px;
+  width: auto;
+  height: auto;
+  border: 2px;
+  border-style: solid;
+  border-color: var(--bd1);
+  border-radius: 15px;
+  display: block;
+  float: right;
+  clear: both;
+  margin-right: 5vw;
+}
+
 /* Timestamp Styling */
 .guest-timestap {
   padding: 1px;
@@ -168,6 +198,30 @@
   color: rgb(112, 112, 112);
   line-height: 2px;
   font-size: smaller;
+}
+
+.guest-timestap2 {
+  padding: 1px;
+  display: block;
+  float: left;
+  clear: both;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+  line-height: 2px;
+  font-size: smaller;
+  margin-left: 5vw;
+}
+
+.owner-timestap2 {
+  padding: 1px;
+  display: block;
+  float: right;
+  clear: both;
+  font-style: italic;
+  color: rgb(112, 112, 112);
+  line-height: 2px;
+  font-size: smaller;
+  margin-right: 5vw;
 }
 
 /* Button Styling */

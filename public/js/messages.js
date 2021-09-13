@@ -44,8 +44,8 @@ socket.on('connect', () => {
     const $userSendDetails = $('<p>');
 
     $userSendDetails.text('Sent at ' + dataAsString);
-    $userMessage.addClass('owner-message');
-    $userSendDetails.addClass('owner-timestap'); //Class needs to be different between the message sent.
+    $userMessage.addClass('owner-message2');
+    $userSendDetails.addClass('owner-timestap2'); //Class needs to be different between the message sent.
 
     $userMessage.text(messageValue);
     $messageDetails.append($userMessage);
@@ -61,8 +61,8 @@ socket.on('connect', () => {
       const $userReceiveDetails = $('<p>');
 
       $userReceiveDetails.text('Received at ' + dataAsString);
-      $userReceiveDetails.addClass('guest-timestap');
-      $messageReceived.addClass('guest-message'); //Class needs to be different between the message recived.
+      $userReceiveDetails.addClass('guest-timestap2');
+      $messageReceived.addClass('guest-message2'); //Class needs to be different between the message recived.
 
       $messageReceived.text(data.message_content);
       $messageDetails.append($messageReceived);
