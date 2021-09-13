@@ -134,7 +134,7 @@ Sign up to create an account and start chatting !!!
 
 ## Demo of APP :
 
-![DEMO APP](./assets/img/chirper.gif)  
+![CHIRPER](./assets/img/chirper.gif)  
 
 ## Test Instructions
 #### For testing user must install Jest dependency in Node.js module
