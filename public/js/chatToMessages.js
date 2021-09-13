@@ -1,5 +1,5 @@
 
-const socket = io('http://localhost:3001');
+const socket = io('https://mysterious-bastion-78954.herokuapp.com/');
 
 const getId = async obj => {
   const chatroomName = obj.id;
