@@ -13,9 +13,8 @@ const sequelize = require('./config/connection');
 const { initSocketServer } = require('./socketServer.js');
 
 const app = express();
-// const SERVER_PORT = process.env.PORT || 3001;
 
-const server = http.createServer(app);
+const server = http.createServer(app); // Extra port
 
 const hbs = exphbs.create({ helpers });
 
@@ -25,14 +24,13 @@ app.set('view engine', 'handlebars');
 const sess = {
   secret: 'Super secret secret',
   cookie: {
-    maxAge: 600000, // 10 minutes in milliseconds is 600000
+    maxAge: 36000, // 10 minutes in milliseconds is 600000
     httpOnly: true,
-    secure: false,
-    sameSite: 'strict'
+    secure: false,    
   },
   rolling: true,
-  resave: true,
-  saveUninitialized: true,
+  resave: false,
+  saveUninitialized: false,
   store: new SequelizeStore({
     db: sequelize
   })
@@ -47,6 +45,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use(routes);
 
+
 sequelize.sync({ force: false }).then(() => {
   initSocketServer(server);
 });
+

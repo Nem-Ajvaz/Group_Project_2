@@ -3,14 +3,12 @@ const { initAllSockets } = require('./controllers/websockets');
 
 const SOCKET_PORT = process.env.PORT || 3001;
 
+const options = { cors: { origin:"*"}};
+
 function initSocketServer(server) {
-  const io = socket(server, {
-    cors: {
-      // allowing all urls to access
-      origin: 'http://localhost:3001',
-      methods: ['GET', 'POST']
-    }
-  });
+
+const io = socket(server, options);
+
   io.on('connection', socket => {
     initAllSockets(socket, io);
   });
