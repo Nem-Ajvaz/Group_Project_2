@@ -1,5 +1,5 @@
 
-const { mapFinderOptions } = require('sequelize/types/lib/utils');
+
 
 const socket = io('https://mysterious-bastion-78954.herokuapp.com/');
 
@@ -33,8 +33,8 @@ socket.on('connect', () => {
 
     const messageValue = $messageInput.val().trim();
 
-    console.log(messageValue === true);
-
+    
+    if (messageValue === '') return;
     // TODO: replace with dynamic values
     socket.emit('newMessage', {
       message_content: messageValue,
@@ -43,7 +43,7 @@ socket.on('connect', () => {
     });
 
     // if its an empty string, end here.
-    if (messageValue === '') return;
+    
 
     const $userMessage = $('<p>');
     const $userSendDetails = $('<p>');
