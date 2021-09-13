@@ -55,7 +55,7 @@ WHEN I use the web app on my tablet <br />
 
 THEN I get a responsive message interface <br />  
 
-## WIREFRAME
+## Wireframe
 
 ### When a user loads the webpage they will be greeted by a page with Sign in/Sign Up options. <br />
 
